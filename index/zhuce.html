@@ -4,7 +4,7 @@
         <link rel="stylesheet" type="text/css" href="../Css/bootstrap.min.css" media="all">
         <link rel="stylesheet" type="text/css" href="../Css/login.css" media="all">
         <script src="../Js/jquery.min.js"></script>
-        <script src="../Js/bootstrap.min.js"></script>
+        
         <script src="https://leancloud.cn/scripts/lib/av-0.4.5.min.js"></script>
         <script src="../Js/validation/dist/jquery.validate.js"></script>
         <script>
@@ -51,24 +51,26 @@
         <script type="text/javascript">
         $().ready(function(){
             $("#signupForm").validate();
-        });
+        
+
         $("#submit").click(function(event) {
         event.preventDefault();
         var info={
             "username":$("#username").val(),
             "password":$("#pwd1").val(),
             "name":$("#name").val(),
-            "personid":$("#personid").val()
-            "phonenumber":$("#phonenumber").val();
+            "verified_id":$("#personid").val(),
+            "phone":$("#phonenumber").val()
         }
         $.ajax({
-            url: '',
+            url: 'https://registration-jlxy.rhcloud.com/api/users',
             type: 'POST',
             dataType: 'text',
             data: info
         })
         .done(function(data) {
             console.log(data);
+            alert("success");
             // window.location.href=""
         })
         .fail(function() {
@@ -76,6 +78,8 @@
         })
         .always(function() {
             console.log("complete");
+        });
+
         });
         
 
@@ -121,7 +125,7 @@
                         <div class="form-group">
                             <label for="name" class="col-sm-2 control-label">姓名</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control required username" id="name" placeholder="请输入姓名">
+                                <input type="text" class="form-control required username" id="name" placeholder="请输入姓名" required>
                             </div>
                         </div>
                         <div class="form-group">
