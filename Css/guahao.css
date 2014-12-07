@@ -1,0 +1,60 @@
+.doc_grade{
+  height: 20px;
+line-height: 20px;
+margin-top: 4px;
+color: #888;
+}
+.doc_box{
+  overflow: hidden;
+  padding: 2px;
+  border-bottom: 1px solid #cdcdcd; 
+}
+.doc_info{
+  float: left;
+  width: 368px;
+  padding: 20px;
+  border-right: 1px solid #CDCDCD;
+      
+}
+
+.doc_base_info{
+  float: left;
+  overflow: hidden;
+  width: 200px;
+}
+.doc-data{
+  border-right:  solid 1px #cdcdcd;
+   float: left;
+  margin:auto;
+  width: 200px;
+  height: 100px;
+
+}
+.order-num{
+  float: left;
+  width: 80px;
+  padding: 20px; 
+  line-height: 20px;
+  vertical-align:middle;
+}
+.num{
+  color: green;
+  font-size: 1.4em;
+}
+.doc-comment{
+
+  
+  float: left;
+  padding-left: 10px;
+  padding-top: 20px;
+
+}
+.schedule{
+  float: left;
+  padding: 20px;
+  vertical-align: middle;
+
+}
+.page-navigation{
+  text-align: center;
+}

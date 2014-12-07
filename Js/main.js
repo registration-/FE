@@ -1,0 +1,31 @@
+
+  $(document).ready(function(){
+    $("#btn1").click(function(){
+      $("#test1").animate({left:'100px',opacity:'0.7',height:'50px',width:'70px'});
+    });
+    $("#nav1").click(function(){
+      $(this).addClass("active")
+      $("#nav2").removeClass("active")
+      $("#nav3").removeClass("active")
+      $("#nav4").removeClass("active")
+    });
+    $("#nav2").click(function(){
+      $(this).addClass("active")
+      $("#nav1").removeClass("active")
+      $("#nav3").removeClass("active")
+      $("#nav4").removeClass("active")
+    });
+    $("#nav3").click(function(){
+      $(this).addClass("active")
+      $("#nav2").removeClass("active")
+      $("#nav1").removeClass("active")
+      $("#nav4").removeClass("active")
+    });
+    $("#nav4").click(function(){
+      $(this).addClass("active")
+      $("#nav2").removeClass("active")
+      $("#nav3").removeClass("active")
+      $("#nav1").removeClass("active")
+    });
+  });
+

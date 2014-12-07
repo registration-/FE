@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></style>
+   <title>确认预约信息</title>
+
+   <link rel="stylesheet" href="../Css/bootstrap.min.css"></link>
+   <link rel="stylesheet" type="text/css" href="../Css/login.css"></link>
+   <link rel="stylesheet" type="text/css" href="../Css/confirm.css">
+   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+   <script src="../Js/bootstrap.min.js"></script>
+   <script src="../Js/main.js"></script>
+   <script src="../Js/news.js"></script>
+   <script type="text/javascript" src="../Js/login.js"></script>
+   <link rel="stylesheet" href="../Css/font-awesome/css/font-awesome.min.css" ></link>
+  
+
+
+</head>
+<body>
+<div id="head" class="col-lg-12" >
+  <div id="logo" class="margin_left1">
+    <i  class="fa fa-stethoscope fa-lg color_pink"> </i>
+    <b >医院挂号平台</b>
+  </div>
+  <!--标题-->
+  <nav id="navigation1" class="navbar navbar-primary stickUp" role="navigation"  >  
+    <div>
+      <ul class="nav nav-pills " >
+        <li id="nav1" class="active"><a href="#">主页</a></li>
+        <li id="nav2"><a href="#">关于我们</a></li>
+        <li id="nav3"><a href="#">登陆</a></li>
+        <li id="nav4"><a href="#">注册</a></li>
+      </ul> 
+    </div>
+  </nav>
+
+</div>
+<br />
+<br />
+<br />
+<br /><br />
+<!--搜索框-->
+<form id="search" role="form" style="" class="list-inline">
+  <input id="search1" type="text" class="form-control"  placeholder="搜索医院、科室"></input>
+  <i class="fa fa-search fa-lg btn" ></i>
+</form>
+
+<!--确认预约单信息-->
+<div class="order-form">
+  <div>
+    <label style="font-size:1.4em ">确认预约信息单</label>
+    <table class="table doc-table">
+      <thead>
+        <tr class="tr1">
+          <td>医生信息</td>
+          <td>门诊信息</td>
+          <td>就诊时间</td>
+          <td>挂号费</td>
+        </tr>
+        <tr class="tr2">
+          <td>
+            <!--医生信息-->
+            
+                <a href="http://www.guahao.com/expert/25250bae-6bbf-478a-bbc4-3ad7e845b48f?hospDeptId=125617813427120" class="img" target="_blank">     
+                  <img  class="img" 
+                    src="http://img.guahao.cn/images/image140//expert/125336754304601/25250bae-6bbf-478a-bbc4-3ad7e845b48f.jpg" alt="鹿斌" title="鹿斌" >
+                  </img>
+                </a>
+                <dl>
+                <dt>
+                  <a target="_blank" class="name" href="http://www.guahao.com/expert/25250bae-6bbf-478a-bbc4-3ad7e845b48f?hospDeptId=125617813427120" onmousedown="return _smartlog(this,'DOCN_1')">鹿斌
+                  </a>
+                </dt>
+                <dd>
+                  <p class="doc_grade">
+                    <span>副主任医师</span>
+                    <span>副教授</span>
+                  </p>
+                  <p>
+                    <a href="http://www.guahao.com/department/125617813427120" onmousedown="return _smartlog(this,'DOCD_1')" target="_blank" title="内分泌科">
+                                    内分泌科
+                    </a>
+                  </p>
+                </dd>
+              </dl>
+            </td>
+          <!--门诊信息-->
+            <td style="text-align: center;">专家门诊</td>
+          <!--就诊时间-->
+            <td style="text-align: center;">2014年11月17日</td>
+          <!--挂号费-->
+            <td class="text-warning" style="text-align: center;">￥7.0</td>
+        </tr>
+      </thead>
+    </table>
+
+    <!--温馨小提示-->
+      <div class="tips">
+        <label>温馨提醒：挂号网免费提供预约挂号服务，实际挂号费由医院收取，请放心使用。</label>      
+      </div>
+    <!--预约信息确认 -->
+      <div class="confirm-info">
+        <label style="font-size: 1.4em;">确认预约信息</label>
+        <div class="confirm-box">
+          <form role="form" class="form-horizontal">
+          <!--输入邮箱验证-->
+            <div class="form-group" style="width:400px">
+              <label class="col-sm-3">邮 &nbsp&nbsp箱:</label>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" id="phone" placeholder="请输入邮箱地址">
+              </div>
+              <div class="col-sm-2">
+                <button class="btn btn-info ">获取验证码</button>
+              </div>
+            </div>
+          <!--邮箱验证码-->
+            <div class="form-group" style="width:400px">
+              <label class="col-sm-3">验证码:</label>
+                <div class="col-sm-7">
+                 <input type="text" class="form-control" id="phone" placeholder="请输入验证码">
+                </div>
+            </div>
+
+          <!--提交-->
+            <div style="margin-left: 100px;">
+              <button class="btn btn-success">确 定</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+<!--底部-->
+<div id="bottom" class="bg_color_gray">
+    <div id="logo" class="color_light_gray align_center" >
+      <i  class="fa fa-stethoscope fa-lg color_light_gray"> </i>
+      <b >医院挂号平台</b>
+    </div>
+    <div class="align_center">
+      <i class="color_light_gray">©copyright 2014 </i>
+    </div>
+    <div class="align_center ">
+      <span><a href="#">帮助</a></span>
+      <span>|</span>
+      <span><a href="#">意见反馈</a></span>
+      <span>|</span>
+      <span><a href="#">投诉举报</a></span>
+      <span>|</span>
+      <span><a href="#">加入我们</a></span>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+</body>
+</html>
+			

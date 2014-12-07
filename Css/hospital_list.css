@@ -1,0 +1,75 @@
+
+#appointment{
+  width:70%;
+  height:auto;
+  
+  left:15%;
+  position:relative;
+  
+}
+.location{
+	margin:10px;
+	font-size: 1.3em;
+	
+}
+.hospital_list{
+	overflow: hidden;
+}
+.hospital_box{
+ 	position: relative;
+ 	padding: 18px 0px 10px 18px;
+ 	overflow: hidden;
+ 	border-bottom: : solid 1px #cdcdcd; 
+}
+.hospital_total{
+	width: 470px;
+	overflow: hidden;
+	float: left;
+	border-right: solid 1px #cdcdcd; 
+}
+.hospital_list img{
+	float: left;
+	border-radius: 10%;
+}
+
+.tel {
+    padding-left: 24px;
+}
+.hospital-comment {
+	padding: 0px;
+	border-right: solid 1px  cdcdcd;
+	float: left;
+    width: 270px;
+    height: 78px;
+}
+.order-num {
+    float: left;
+    width: 64px;
+    margin: 0px 10px 0px 20px;
+    text-align: center;
+}
+.hospital-comment .hop-comment {
+	text-align: center;
+    width: 122px;
+    padding-top: 0px;
+    position: relative;
+    float: left;
+    padding-left: 28px;
+}
+.hop-comment p {
+    line-height: 24px;
+    text-align: left;
+    padding-left: 22px;
+}
+.hop-comment span{
+	color:  #5CA945;
+}
+.order-num .num {
+    font-size: 18px;
+    color: #5CA945;
+    line-height: 22px;
+}
+.guahao-btn{
+	padding: 10px 10px 10px 60px;
+	float: left;
+}

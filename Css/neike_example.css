@@ -1,0 +1,95 @@
+
+
+.right-part{
+	display: inline-block;
+}
+.disease-box{
+	margin:20px 20px 20px 20px;
+	width: 30%;
+	min-width: 207px;
+	display: inline-block;
+
+}
+.common-disease{
+	margin:20px 20px 20px 20px;
+	width: 60%;
+	min-width: 400px;
+	display: inline-block;
+	vertical-align: top;
+	/*border-left: solid 1px #cdcdcd;*/
+}
+.brief-intro{
+	color: #575757;
+	vertical-align: 10px;
+	line-height: 25px;
+}
+.other-dep-list{
+	vertical-align: 10px;
+	line-height: 20px;
+}
+.head{
+
+}
+.disease-list ul{
+	list-style-type: none;
+	display: block;
+}
+.disease-list li{
+	line-height: 15px;
+	vertical-align: 10px;
+	width: 100px;
+	margin-right: 40px;
+	display: inline-block;
+}
+.hospital-city{
+	display: inline-block;
+	width: 30px;
+}
+.hospital-district{
+	display: inline-block;
+	width: 40px;
+}
+.hospital-name{
+	margin-left: 10px;
+	display: inline-block;
+	width: 140px;
+}
+.hospital-level{
+	display: inline-block;
+	width: 50px;
+}
+.doctor-num{
+	display: inline-block;
+	width: 80px;
+}
+.comments-num{
+	display: inline-block;
+	width: 80px;
+}
+.good-hospital{
+	display: inline-block;
+}
+.doc-info{
+	vertical-align: top;
+	width: 100px;
+	display: inline-block;
+}
+.hos-info{
+	width: 160px;
+	display: inline-block;
+}
+.doc-major{
+	display: inline-block;
+	width: 100px;
+	vertical-align: top;
+	color: #575757;
+	text-overflow:ellipsis;
+}
+.doc-comments{
+	display: inline-block;
+	width: 80px;
+	vertical-align: top;
+}
+.doc-source{
+	vertical-align: top;
+}

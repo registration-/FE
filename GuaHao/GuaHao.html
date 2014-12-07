@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></style>
+   <title>预约</title>
+   <link rel="stylesheet" href="../Css/main.css"></link>
+   <link rel="stylesheet" href="../Css/bootstrap.min.css"></link>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="../Css/guahao.css">
+
+   <link rel="stylesheet" type="text/css" href="../Css/login.css"></link>
+   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+   <script src="../Js/bootstrap.min.js"></script>
+   <script src="../Js/main.js"></script>
+   <script src="../Js/news.js"></script>
+   <script type="text/javascript" src="../Js/login.js"></script>
+
+  
+
+   <link rel="stylesheet" href="../Css/font-awesome/css/font-awesome.min.css" ></link>
+   
+
+    
+  
+    <link rel="stylesheet" type="text/css" media="screen"
+     href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+
+
+
+  </head>
+<body>
+<div id="head" class="col-lg-12" >
+  <div id="logo" class="margin_left1">
+    <i  class="fa fa-stethoscope fa-lg color_pink"> </i>
+    <b >医院挂号平台</b>
+  </div>
+  <!--标题-->
+  <nav id="navigation1" class="navbar navbar-primary stickUp" role="navigation" >  
+    <div>
+      <ul class="nav nav-pills" >
+        <li id="nav1" class="active"><a href="../Main/Main.html">主页</a></li>
+        <li id="nav2"><a href="#">关于我们</a></li>
+        <li id="nav3"><a href="#">登陆</a></li>
+        <li id="nav4"><a href="#">注册</a></li>
+      </ul> 
+    </div>
+  </nav>
+
+</div>
+<br />
+<br />
+<br />
+<br /><br />
+<!--搜索框-->
+<form id="search" role="form" style="" class="list-inline">
+  <input id="search1" type="text" class="form-control"  placeholder="搜索医院、科室"></input>
+  <i class="fa fa-search fa-lg btn" ></i>
+</form>
+
+<!--预约导航-->
+<div id="appointment" class="appoint_min_width">
+   <ul class="nav nav-tabs">
+      <li class="active"><a href="#"> 首页 </a></li>
+      <li><a href="#">按医院预约</a></li>
+      <li><a href="#">按科室预约</a></li>
+      <li><a href="#">按疾病预约</a></li>
+   </ul>
+   <!--预约挂号-->
+
+   <p class="text-success font_size_md margin_left_sm">预约挂号</p>
+   <hr />
+   <!--科室、医生筛选-->
+   <table class="table table" >
+      <tbody>
+         <tr>
+            <td>科室筛选</td>
+            <td><a href="#">门诊普外</a></td>
+            <td><a href="#">门诊心脏</a></td>
+            <td><a href="#">外科（一级）</a></td>
+            <td><a href="#">门诊内分泌</a></td>
+            <td><a href="#">门诊消化</a></td>
+            <td><a href="#">展开<span class="caret"></span></a></td>
+         </tr>
+         <tr>
+            <td>医师筛选</td>
+            <td><a href="#">主任医师</a></td>
+            <td><a href="#">副主任医师</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+         </tr>
+      </tbody>
+   </table>
+
+
+    <div id="datetimepicker" class="input-append date inline_block form-inline margin_left_sm">
+      <span class="text-success font_size_md">就诊日期</span>
+      <span><input type="text" class="form-control" style="width:150px"></input></span>
+      <span class="add-on">
+        <button style="background-color:#ffffff;border-style:none">
+           <i class="fa fa-calendar" style="font-size:1.2em"></i>
+        </button>
+      </span>
+    </div>
+
+    <div id="datetimepicker2" class="input-append date inline_block form-inline margin_left_sm">
+      <span class="text-success font_size_md">-</span>
+      <span><input type="text" class="form-control" style="width:150px"></input></span>
+      <span class="add-on">
+        <button style="background-color:#ffffff;border-style:none">
+           <i class="fa fa-calendar" style="font-size:1.2em"></i>
+        </button>
+      </span>
+    </div>
+  <!--医生信息-->
+    <div class="doc_box">
+      <div class="doc_info">
+        <div class="doc_base_info">
+          <a href="http://www.guahao.com/expert/25250bae-6bbf-478a-bbc4-3ad7e845b48f?hospDeptId=125617813427120" class="img" target="_blank">     
+            <img  class="doc_img" 
+            src="http://img.guahao.cn/images/image140//expert/125336754304601/25250bae-6bbf-478a-bbc4-3ad7e845b48f.jpg" alt="鹿斌" title="鹿斌" >
+            </img>
+          </a>
+          <dl>
+            <dt>
+              <a target="_blank" class="name" href="http://www.guahao.com/expert/25250bae-6bbf-478a-bbc4-3ad7e845b48f?hospDeptId=125617813427120" onmousedown="return _smartlog(this,'DOCN_1')">鹿斌
+              </a>
+            </dt>
+            <dd>
+              <p class="doc_grade">
+                <span>副主任医师</span>
+                <span>副教授</span>
+              </p>
+              <p>
+                <a href="http://www.guahao.com/department/125617813427120" onmousedown="return _smartlog(this,'DOCD_1')" target="_blank" title="内分泌科">
+                                  内分泌科
+                </a>
+              </p>
+            </dd>
+          </dl>
+        </div>
+
+        <!--擅长-->
+
+           <div class="doc-skill">
+            <p><label>擅长：</label>妙手回春，药到病除，强身健体，包治百病</p>
+          </div>  
+      </div> 
+        <!--预约量-->
+        <div class="doc-data">
+          <div class="order-num">
+            <p class="num">182</p>
+            <p>预约量</p>
+          </div>
+          <!--点赞-->
+        <div class="doc-comment"  >
+          <span class="fa fa-thumbs-o-up dianzan" style="font-size: 2em;color:green;margin-top: 10px"></span>
+          <span>
+            <span>疗效：</span><span style="color: green">100%</span>
+          </span>          
+        </div>
+        </div>
+        <!--时间表-->
+        <div class="schedule">
+          <div>
+            <button class="btn btn-info">
+              <div class="date">11/17</div>
+              <div class="week">周一</div>
+            </button>
+            <button class="btn btn-info">
+              <div class="date">11/27</div>
+              <div class="week">周四</div>
+            </button>
+            <button class="btn btn-info">
+              <div class="date">11/29</div>
+              <div class="week">周六</div>
+            </button>
+            <button class="btn btn-info">
+              <div class="date">11/30</div>
+              <div class="week">周日</div>
+            </button>
+          </div>
+        </div> 
+        
+    </div>
+
+
+<!--医生信息-->
+    <div class="doc_box">
+      <div class="doc_info">
+        <div class="doc_base_info">
+          <a href="http://www.guahao.com/expert/25250bae-6bbf-478a-bbc4-3ad7e845b48f?hospDeptId=125617813427120" class="img" target="_blank">     
+            <img  class="doc_img" 
+            src="http://img.guahao.cn/images/image140//expert/125336754304601/25250bae-6bbf-478a-bbc4-3ad7e845b48f.jpg" alt="鹿斌" title="鹿斌" >
+            </img>
+          </a>
+          <dl>
+            <dt>
+              <a target="_blank" class="name" href="http://www.guahao.com/expert/25250bae-6bbf-478a-bbc4-3ad7e845b48f?hospDeptId=125617813427120" onmousedown="return _smartlog(this,'DOCN_1')">鹿斌
+              </a>
+            </dt>
+            <dd>
+              <p class="doc_grade">
+                <span>副主任医师</span>
+                <span>副教授</span>
+              </p>
+              <p>
+                <a href="http://www.guahao.com/department/125617813427120" onmousedown="return _smartlog(this,'DOCD_1')" target="_blank" title="内分泌科">
+                                  内分泌科
+                </a>
+              </p>
+            </dd>
+          </dl>
+        </div>
+
+        <!--擅长-->
+
+           <div class="doc-skill">
+            <p><label>擅长：</label>妙手回春，药到病除，强身健体，包治百病</p>
+          </div>  
+      </div> 
+        <!--预约量-->
+        <div class="doc-data">
+          <div class="order-num">
+            <p class="num">182</p>
+            <p>预约量</p>
+          </div>
+          <!--点赞-->
+        <div class="doc-comment"  >
+          <span class="fa fa-thumbs-o-up dianzan" style="font-size: 2em;color:green;margin-top: 10px"></span>
+          <span>
+            <span>疗效：</span><span style="color: green">100%</span>
+          </span>          
+        </div>
+        </div>
+        <!--时间表-->
+        <div class="schedule">
+          <div>
+            <button class="btn btn-info">
+              <div class="date">11/17</div>
+              <div class="week">周一</div>
+            </button>
+            <button class="btn btn-info">
+              <div class="date">11/27</div>
+              <div class="week">周四</div>
+            </button>
+            <button class="btn btn-info">
+              <div class="date">11/29</div>
+              <div class="week">周六</div>
+            </button>
+            <button class="btn btn-info">
+              <div class="date">11/30</div>
+              <div class="week">周日</div>
+            </button>
+          </div>
+        </div> 
+        
+    </div>
+
+
+<!--医生信息-->
+    <div class="doc_box">
+      <div class="doc_info">
+        <div class="doc_base_info">
+          <a href="http://www.guahao.com/expert/25250bae-6bbf-478a-bbc4-3ad7e845b48f?hospDeptId=125617813427120" class="img" target="_blank">     
+            <img  class="doc_img" 
+            src="http://img.guahao.cn/images/image140//expert/125336754304601/25250bae-6bbf-478a-bbc4-3ad7e845b48f.jpg" alt="鹿斌" title="鹿斌" >
+            </img>
+          </a>
+          <dl>
+            <dt>
+              <a target="_blank" class="name" href="http://www.guahao.com/expert/25250bae-6bbf-478a-bbc4-3ad7e845b48f?hospDeptId=125617813427120" onmousedown="return _smartlog(this,'DOCN_1')">鹿斌
+              </a>
+            </dt>
+            <dd>
+              <p class="doc_grade">
+                <span>副主任医师</span>
+                <span>副教授</span>
+              </p>
+              <p>
+                <a href="http://www.guahao.com/department/125617813427120" onmousedown="return _smartlog(this,'DOCD_1')" target="_blank" title="内分泌科">
+                                  内分泌科
+                </a>
+              </p>
+            </dd>
+          </dl>
+        </div>
+
+        <!--擅长-->
+
+           <div class="doc-skill">
+            <p><label>擅长：</label>妙手回春，药到病除，强身健体，包治百病</p>
+          </div>  
+      </div> 
+        <!--预约量-->
+        <div class="doc-data">
+          <div class="order-num">
+            <p class="num">182</p>
+            <p>预约量</p>
+          </div>
+          <!--点赞-->
+        <div class="doc-comment"  >
+          <span class="fa fa-thumbs-o-up dianzan" style="font-size: 2em;color:green;margin-top: 10px"></span>
+          <span>
+            <span>疗效：</span><span style="color: green">100%</span>
+          </span>          
+        </div>
+        </div>
+        <!--时间表-->
+        <div class="schedule">
+          <div>
+            <button class="btn btn-info">
+              <div class="date">11/17</div>
+              <div class="week">周一</div>
+            </button>
+            <button class="btn btn-info">
+              <div class="date">11/27</div>
+              <div class="week">周四</div>
+            </button>
+            <button class="btn btn-info">
+              <div class="date">11/29</div>
+              <div class="week">周六</div>
+            </button>
+            <button class="btn btn-info">
+              <div class="date">11/30</div>
+              <div class="week">周日</div>
+            </button>
+          </div>
+        </div> 
+        
+    </div>
+
+
+<!--医生信息-->
+    <div class="doc_box">
+      <div class="doc_info">
+        <div class="doc_base_info">
+          <a href="http://www.guahao.com/expert/25250bae-6bbf-478a-bbc4-3ad7e845b48f?hospDeptId=125617813427120" class="img" target="_blank">     
+            <img  class="doc_img" 
+            src="http://img.guahao.cn/images/image140//expert/125336754304601/25250bae-6bbf-478a-bbc4-3ad7e845b48f.jpg" alt="鹿斌" title="鹿斌" >
+            </img>
+          </a>
+          <dl>
+            <dt>
+              <a target="_blank" class="name" href="http://www.guahao.com/expert/25250bae-6bbf-478a-bbc4-3ad7e845b48f?hospDeptId=125617813427120" onmousedown="return _smartlog(this,'DOCN_1')">鹿斌
+              </a>
+            </dt>
+            <dd>
+              <p class="doc_grade">
+                <span>副主任医师</span>
+                <span>副教授</span>
+              </p>
+              <p>
+                <a href="http://www.guahao.com/department/125617813427120" onmousedown="return _smartlog(this,'DOCD_1')" target="_blank" title="内分泌科">
+                                  内分泌科
+                </a>
+              </p>
+            </dd>
+          </dl>
+        </div>
+
+        <!--擅长-->
+
+           <div class="doc-skill">
+            <p><label>擅长：</label>妙手回春，药到病除，强身健体，包治百病</p>
+          </div>  
+      </div> 
+        <!--预约量-->
+        <div class="doc-data">
+          <div class="order-num">
+            <p class="num">182</p>
+            <p>预约量</p>
+          </div>
+          <!--点赞-->
+        <div class="doc-comment"  >
+          <span class="fa fa-thumbs-o-up dianzan" style="font-size: 2em;color:green;margin-top: 10px"></span>
+          <span>
+            <span>疗效：</span><span style="color: green">100%</span>
+          </span>          
+        </div>
+        </div>
+        <!--时间表-->
+        <div class="schedule">
+          <div>
+            <button class="btn btn-info">
+              <div class="date">11/17</div>
+              <div class="week">周一</div>
+            </button>
+            <button class="btn btn-info">
+              <div class="date">11/27</div>
+              <div class="week">周四</div>
+            </button>
+            <button class="btn btn-info">
+              <div class="date">11/29</div>
+              <div class="week">周六</div>
+            </button>
+            <button class="btn btn-info">
+              <div class="date">11/30</div>
+              <div class="week">周日</div>
+            </button>
+          </div>
+        </div>
+        
+    </div>
+
+<!--分页导航--> 
+        <div class="page-navigation">        
+          <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
+        </div>
+
+  
+
+
+
+</div>
+
+
+
+<!--底部-->
+<div id="bottom" class="bg_color_gray">
+    <div id="logo" class="color_light_gray align_center" >
+      <i  class="fa fa-stethoscope fa-lg color_light_gray"> </i>
+      <b >医院挂号平台</b>
+    </div>
+    <div class="align_center">
+      <i class="color_light_gray">©copyright 2014 </i>
+    </div>
+    <div class="align_center ">
+      <span><a href="#">帮助</a></span>
+      <span>|</span>
+      <span><a href="#">意见反馈</a></span>
+      <span>|</span>
+      <span><a href="#">投诉举报</a></span>
+      <span>|</span>
+      <span><a href="#">加入我们</a></span>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+
+<script type="text/javascript"  
+    src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">  
+    </script>  
+<script type="text/javascript"  
+    src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">  
+</script>  
+<script type="text/javascript"  
+    src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">  
+</script>  
+  
+  
+ <script type="text/javascript">  
+      $('#datetimepicker').datetimepicker({  
+        format: 'MM/dd/yyyy hh:mm',  
+        language: 'en',  
+        pickDate: true,  
+        pickTime: true,  
+        hourStep: 1,  
+        minuteStep: 15,  
+        secondStep: 30,  
+        inputMask: true  
+      });  
+</script>
+
+ <script type="text/javascript">  
+      $('#datetimepicker2').datetimepicker({  
+        format: 'MM/dd/yyyy hh:mm',  
+        language: 'en',  
+        pickDate: true,  
+        pickTime: true,  
+        hourStep: 1,  
+        minuteStep: 15,  
+        secondStep: 30,  
+        inputMask: true  
+      });  
+</script>    
+</body>
+</html>

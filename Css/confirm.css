@@ -1,0 +1,265 @@
+* {
+  font-family: "Microsoft YaHei","iconfont","FontAwesome"  !important;
+}
+.font_size_md{
+  font-size: 1.2em
+}
+.btn_long{
+  width: 200px; 
+}
+.select_min_width {
+  min-width: 180px;
+}
+.appoint_min_width{
+  min-width: 300px;
+}
+.color_light_gray{
+  color:#C1CDCD;
+}
+.color_gray{
+    color: #F2F2F2;
+}
+.color_green{
+  color: #2E8B57;
+}
+.bg_color_green{
+  background: #2E8B57;
+}
+.bg_color_gray{
+  background: #F2F2F2;
+}
+.color_blue{
+  color:#68838b;
+}
+.bg_color_blue{
+    background:#68838b;
+}
+.color_pink{
+    color:#FA8072; 
+}
+.bg_color_pink{
+    background:#FA8072;
+}
+.color_red{
+  color:#FF3030
+}
+.inline_block{
+  display: inline-block;
+}
+.block{
+  display: block;
+}
+.inline{
+  display: inline;
+}
+
+.align_center{
+  text-align:center; 
+}
+.margin_left_sm{
+  margin-left:10px;
+}
+.margin_left1{
+  margin-left:40px; 
+}
+.margin_top1{
+  margin-top: 10px;
+}
+.img{
+  float: left;
+  display: block;
+  height: 60px;
+  margin: 0px auto;
+  margin-right:10px; 
+  max-width: 60px;
+  border-radius: 10px;
+    }
+.doc_grade{
+  height: 20px;
+line-height: 20px;
+margin-top: 4px;
+color: #888;
+}
+.doc_box{
+  overflow: hidden;
+  padding: 2px;
+}
+.doc_info{
+  float: left;
+  width: 368px;
+  padding: 20px;
+    border-right: 1px solid #F2F2F2;
+      
+}
+
+.doc_base_info{
+  float: left;
+  overflow: hidden;
+  width: 200px;
+}
+#head{
+  
+  margin-top:6px;
+ width:100%;
+ height:150px;
+ overflow: hidden;
+ border-bottom: solid 5px #cdcdcd;
+  
+}
+
+#logo{
+  margin-top:26px;
+}
+
+#logo i{
+  
+  font-size:4em;
+}
+
+#logo b{
+  
+  font-size:3em;
+}
+
+#navigation1{
+  
+  left:1000px;
+  top:26px;
+  position:absolute;
+}
+#navigation1 ul{
+  font-size: 1.3em;
+}
+#search {
+  left:530px;
+  top:100px;
+  width:300px;
+  height:40px;
+  position:absolute;
+}
+#search input{
+  width:270px;
+}
+#search i{
+  left:270px;
+  top:-32px;
+  position:relative;
+  color:#c1cdcd;
+  font-size:1.8em;
+}
+#rigister{
+  width: 220px;
+  margin-left: 30px;
+  top:-30px;
+  position:relative;
+  
+}
+#appointment{
+  width:70%;
+  height:auto;
+  top:90px;
+  left:15%;
+  position:relative;
+  border:1px solid #c1cdcd;
+}
+#fastAppointment{
+  margin-left:15px;
+  margin-top:15px;
+  width:20%;
+  height:260px;
+  /*border:1px solid #c1cdcd*/  
+}
+#fastAppointment p{
+  font-size:1.2em;
+}
+#label1{
+  font-size: 1.1em;
+  float:left;
+}
+#label2{
+  margin-top:10px;
+  float: left;
+  font-size:1.1em;
+}
+#label3{
+  margin-top:10px;
+  float: left;
+  font-size:1.1em;
+
+}
+#label4{
+  margin-top:10px;
+  
+  font-size:1.1em;
+
+}
+#select1{
+  width:70%;
+  overflow:auto;
+}
+#select2{
+  width:70%;
+  overflow:auto;
+  margin-top:10px;
+
+}
+#select3{
+  width:70%;
+  overflow:auto;
+  margin-top:10px;
+
+}
+#select4{
+  width:70%;
+  overflow:auto;
+  margin-top:10px;
+}
+
+#bottom{
+  position:absolute;
+  width:100%;
+  height:150px;
+  margin-top: 200px; 
+ 
+}
+.order-form{
+	width: 1000px;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+.tr1 td{
+	border-bottom: solid 3px #cdcdcd;
+	text-align: center;
+	padding: 2px;
+}
+.tr2 td{
+
+		padding: 2px;
+}
+.doc-table{
+	font-size: 1.2em;
+}
+.tips{
+	font-size: 1.2em;
+	color: #888;
+	padding-left: 5px;
+	height: 40px;
+	background-color:#d1eeee;
+	vertical-align: 40px;
+	line-height: 40px;
+}
+.confirm-info{
+	margin-top: 20px;
+}
+.confirm-box{
+	overflow: hidden;
+	padding:10px;
+	margin-top: 10px;
+	border: solid 3px #cdc9a5;
+}
+.confirm-box label {
+	font-size: 1.3em;
+	vertical-align: 35px;
+	line-height: 35px;
+}

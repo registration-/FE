@@ -1,0 +1,49 @@
+.by-keshi{
+	
+}
+.keshi-title{
+	font-size: 1.6em;
+	text-align: center;
+}
+.detail-keshi-title{
+	font-size: 1.6em;
+	margin-left: 200px;
+}
+.general-category{
+	padding: 20px 20px 20px 0;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	width: 300px;
+	border-right: solid 2px #cdcdcd;
+	display: inline-block;
+}
+.detail-category{
+	vertical-align: top;
+	
+	padding: 20px;
+	display: inline-block;
+}
+.general-list{
+	list-style-type: none;
+}
+.general-list li{
+	font-size: 1.3em;
+	padding-left: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+}
+.general-list li:hover{
+	background-color:#d1eeee;
+}
+.general-list a{
+	text-decoration: none;
+}
+.detail-list{
+	list-style-type: none;
+}
+.detail-list li{
+	padding-top: 7px;
+	padding-bottom: 7px;
+	font-size: 1.1em;
+}

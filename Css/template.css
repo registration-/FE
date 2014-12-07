@@ -1,0 +1,468 @@
+* {
+  font-family: "Microsoft YaHei","iconfont","FontAwesome"  !important;
+}
+.font_size_md{
+  font-size: 1.2em
+}
+.btn_long{
+  width: 200px; 
+}
+.select_min_width {
+  min-width: 180px;
+}
+.appoint_min_width{
+  min-width: 300px;
+}
+.color_light_gray{
+  color:#C1CDCD;
+}
+.color_gray{
+    color: #F2F2F2;
+}
+.color_green{
+  color: #2E8B57;
+}
+.bg_color_green{
+  background: #2E8B57;
+}
+.bg_color_gray{
+  background: #F2F2F2;
+}
+.color_blue{
+  color:#68838b;
+}
+.bg_color_blue{
+    background:#68838b;
+}
+.color_pink{
+    color:#FA8072; 
+}
+.bg_color_pink{
+    background:#FA8072;
+}
+.color_red{
+  color:#FF3030
+}
+.inline_block{
+  display: inline-block;
+}
+.block{
+  display: block;
+}
+.inline{
+  display: inline;
+}
+
+.align_center{
+  text-align:center; 
+}
+.margin_left_sm{
+  margin-left:10px;
+}
+.margin_left1{
+  margin-left:40px; 
+}
+.margin_top1{
+  margin-top: 10px;
+}
+.doc_img{
+  float: left;
+  display: block;
+  height: 60px;
+  margin: 0px auto;
+  margin-right:10px; 
+  max-width: 60px;
+  border-radius: 10px;
+    }
+.doc_grade{
+  height: 20px;
+line-height: 20px;
+margin-top: 4px;
+color: #888;
+}
+.doc_box{
+  overflow: hidden;
+  padding: 2px;
+}
+.doc_info{
+  float: left;
+  width: 368px;
+  padding: 20px;
+    border-right: 1px solid #F2F2F2;
+      
+}
+
+.doc_base_info{
+  float: left;
+  overflow: hidden;
+  width: 200px;
+}
+#head{
+  
+  margin-top:6px;
+ width:100%;
+ height:150px;
+ position:absolute;
+ border-bottom: solid 5px #cdcdcd;
+  
+}
+
+#logo{
+  margin-top:26px;
+}
+
+#logo i{
+  
+  font-size:4em;
+}
+
+#logo b{
+  
+  font-size:3em;
+}
+
+#navigation1{
+  
+  left:1000px;
+  top:26px;
+  position:absolute;
+}
+#navigation1 ul{
+  font-size: 1.3em;
+}
+#search {
+  left:530px;
+  top:100px;
+  width:300px;
+  height:40px;
+  position:absolute;
+}
+#search input{
+  width:270px;
+}
+#search i{
+  left:270px;
+  top:-32px;
+  position:relative;
+  color:#c1cdcd;
+  font-size:1.8em;
+}
+#rigister{
+  width: 220px;
+  margin-left: 30px;
+  top:-30px;
+  position:relative;
+  
+}
+#appointment{
+  width:70%;
+  height:auto;
+  top:90px;
+  left:15%;
+  position:relative;
+  border:1px solid #c1cdcd;
+}
+#fastAppointment{
+  margin-left:15px;
+  margin-top:15px;
+  width:20%;
+  height:260px;
+  /*border:1px solid #c1cdcd*/  
+}
+#fastAppointment p{
+  font-size:1.2em;
+}
+#label1{
+  font-size: 1.1em;
+  float:left;
+}
+#label2{
+  margin-top:10px;
+  float: left;
+  font-size:1.1em;
+}
+#label3{
+  margin-top:10px;
+  float: left;
+  font-size:1.1em;
+
+}
+#label4{
+  margin-top:10px;
+  
+  font-size:1.1em;
+
+}
+#select1{
+  width:70%;
+  overflow:auto;
+}
+#select2{
+  width:70%;
+  overflow:auto;
+  margin-top:10px;
+
+}
+#select3{
+  width:70%;
+  overflow:auto;
+  margin-top:10px;
+
+}
+#select4{
+  width:70%;
+  overflow:auto;
+  margin-top:10px;
+}
+
+#bottom{
+  position:absolute;
+  width:100%;
+  height:150px;
+  margin-top: 200px;
+ 
+}
+table{ 
+  border-collapse:collapse;
+  border-spacing:0;
+}
+em,i,u{ 
+  font-style:normal;
+}
+
+body{
+  font-size:12px;
+   font-family:"宋体";
+   color:#434343;
+ }
+.clear{
+  clear:both; 
+   font-size:0;
+    overflow:hidden; 
+    height:0;
+  }
+.blank10{
+  clear:both;
+    font-size:0; 
+    overflow:hidden; 
+    height:10px;
+  }
+.blank{
+  clear:both;  
+  font-size:0; 
+  overflow:hidden; 
+  height:10px; 
+  background:#FFF;
+}
+/*********content css定义***********/
+#content{
+  width:460px;
+  margin:0 auto;
+  margin-left: 15px;
+}
+h1,h2,h3{ 
+  font-family:"微软雅黑";
+  color:#00659b;
+}
+h1,h2,h3,h4,h5,h6{ 
+  font-weight:bold;
+}
+#footer{
+  padding-bottom:0;
+  margin:0px auto 0;
+}
+/*********main css定义***********/
+.mb15 {
+  margin-bottom: 0px;
+}
+#main{
+  width:460px; 
+  margin: auto 0px; 
+  overflow:hidden;
+}
+/*********图片切换 css定义***********/
+.sub_box{
+  width:460px; 
+  height:250px; 
+  float:left; 
+  position:relative; 
+  overflow:hidden; 
+  border:1px solid #cccccc; 
+  background:url() center center no-repeat; 
+  *background:url() 220px 120px no-repeat;
+}
+.sub_box img{
+  border:none; 
+  width:460px; 
+  height:300px;
+}
+#bd1lfimg{
+  position:relative; 
+  width:663px; 
+  height:310px; 
+  overflow:hidden;
+}
+#bd1lfimg div{
+  width:100000px; 
+  margin-left:-4px;
+}
+#bd1lfimg dl{
+  width:663px; 
+  height:300px; 
+  position:relative; 
+  overflow:hidden; 
+  float:left;
+}
+#bd1lfimg dt{
+  width:460px; 
+  height:310px; 
+  position:absolute; 
+  left:0px; 
+  top:0px;
+}
+#bd1lfimg dd{
+  width:460px; 
+  height:80px; 
+  background:#000000; 
+  filter:alpha(Opacity=70); 
+  opacity: 0.7;
+  position:absolute; 
+  left:0px; 
+  bottom:0px; 
+  padding:0 10px;
+}
+#bd1lfimg dd h2{
+  height:20px; 
+  padding:0px 0 0px 0; 
+  line-height:25px; 
+  overflow:hidden;
+}
+#bd1lfimg dd h2 a{
+  font-size:14px; 
+  font-weight:bold; 
+  color:#ffffff;
+}
+#bd1lfimg dd a{
+  color:#ffffff; 
+  text-decoration:none;
+}
+#bd1lfimg dd a:hover{
+  text-decoration:none; 
+  color:#cccccc;
+}
+#bd1lfimg dd tt{
+  color:#dddddd; 
+  line-height:1.2em;
+}
+#bd1lfimg dd tt a:hover{
+  text-decoration:underline;
+}
+
+.sub_nav{width:460px; 
+  height:25px; 
+  bottom:0px; 
+  position:absolute; 
+  color:#999999; 
+  z-index:200;
+}
+.sub_no{
+  height:25px; 
+  float:right;
+}
+.sub_no li{
+  display:block; 
+  width:25px; 
+  height:25px; 
+  float:left; 
+  overflow:hidden; 
+  line-height:25px; 
+  vertical-align:middle; 
+  text-align:center; 
+  background:#000000; 
+  filter:alpha(Opacity=70); 
+  Opacity:0.7; 
+  font-family:Arial; 
+  font-size:11px; 
+  color:#999999; 
+  cursor:pointer;
+}
+.sub_no li.show{
+  background:#ffffff; 
+  color:#000000;
+}
+.sub_more{
+  float:right; 
+  width:50px; 
+  height:25px; 
+  background:#000000; 
+  filter:alpha(Opacity=70); 
+  Opacity:0.7; 
+  color:#999999; 
+  text-align:center; 
+  line-height:25px;
+}
+.sub_more a{
+  color:#999999;
+}
+.sub_more a:hover{
+  color:#cccccc; 
+  text-decoration:none;
+}
+.fast-search{
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  border: solid 1px #cdcdcd;
+  padding:20px;
+  overflow: hidden;
+}
+.by-hospital .text-warning{
+  font-size: 1.6em; 
+  overflow: hidden;
+}
+.tabs{
+  overflow: hidden;
+  font-size: 1.2em;
+}
+.tabs a{
+  text-align: center;
+  float: left;
+  margin-left:2px; 
+  width: 110px; 
+  color: #888;
+  cursor:pointer;
+  background:none repeat scroll 0% 0% #F5F5F5;
+}
+.tabs a:hover{
+  text-decoration: none;
+  background-color: #d1eeee;
+}
+
+.hospital-list{
+  border: solid 1px #cdcdcd;
+  padding: 20px;
+  overflow:hidden;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#list-content{
+  list-style: outside none none;
+  overflow: hidden;
+}
+#list-content li{
+  padding: 4px 0px 4px 20px;
+  width: 285px;
+  float: left;
+}
+#list-content a{
+  
+  display: block;
+  font-size: 1.2em;
+  vertical-align: baseline;
+  line-height: 20px;
+}
+.on{
+  background-color: #d1eeee;
+}

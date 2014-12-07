@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></style>
+   <title>医院列表</title>
+   <link rel="stylesheet" href="../Css/template.css"></link>
+   <link rel="stylesheet" href="../Css/bootstrap.min.css"></link>
+   
+   <link rel="stylesheet" type="text/css" href="../Css/main.css">
+   <link rel="stylesheet" type="text/css" href="../Css/hospital_list.css">
+   
+
+   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+   <script src="../Js/bootstrap.min.js"></script>
+   
+   <link rel="stylesheet" href="../Css/font-awesome/css/font-awesome.min.css" ></link>
+</head>
+
+
+
+<body>
+<div id="head" class="col-lg-12" >
+  <div id="logo" class="margin_left1">
+    <i  class="fa fa-stethoscope fa-lg color_pink"> </i>
+    <b >医院挂号平台</b>
+  </div>
+  <!--标题-->
+  <nav id="navigation1" class="navbar navbar-primary stickUp" role="navigation" >  
+    <div>
+      <ul class="nav nav-pills " >
+        <li id="nav1" class="active"><a href="#">主页</a></li>
+        <li id="nav2"><a href="#">关于我们</a></li>
+        <li id="nav3"><a href="#">登陆</a></li>
+        <li id="nav4"><a href="#">注册</a></li>
+      </ul> 
+    </div>
+  </nav>
+</div>
+<br />
+<br />
+<br />
+<br /><br />
+<!--搜索框-->
+<form id="search" role="form" style="" class="list-inline">
+  <input id="search1" type="text" class="form-control"  placeholder="搜索医院、科室"></input>
+  <i class="fa fa-search fa-lg btn" ></i>
+</form>
+
+
+<div id="appointment" class="appoint_min_width">
+   <ul class="nav nav-tabs">
+      <li class="active"><a href="#"> 首页 </a></li>
+      <li><a href="#">按医院预约</a></li>
+      <li><a href="#">按科室预约</a></li>
+      <li><a href="#">按疾病预约</a></li>
+   </ul>
+
+
+<!--地点-->
+<div class="location">
+  <span class="fa fa-location-arrow text-primary ">&nbsp</span>
+  <label class="city">上海&nbsp</label>
+  <a href="#">切换</a>
+</div>
+<!--医院等级与医院类型-->
+<div class="">
+  <table class="table table" >
+      <tbody>
+         <tr>
+            <td>医院等级</td>
+            <td><a href="#">三级甲等</a></td>
+            <td><a href="#">三级医院</a></td>
+            <td><a href="#">二级医院</a></td>
+            <td><a href="#">一级医院</a></td>
+            <td><br/></td>
+            <td><br/></td>
+            <td><br/></td>
+            <td><br/></td>
+         </tr>
+         <tr>
+            <td>医院类型</td>
+            <td><a href="#">综合医院</a></td>
+            <td><a href="#">对外专科</a></td>
+            <td><a href="#">妇产科医院</a></td>
+            <td><a href="#">皮肤科医院</a></td>
+            <td><a href="#">中医医院</a></td>
+            <td><a href="#">不孕不育医院</a></td>
+            <td><a href="#">儿科医院</a></td>
+            <td><a href="#">展开<span class="caret"></span></a></td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+<!--医院列表-->
+<div class="hospital_list">
+  <div class="hospital_box">
+    <div class="hospital_total">
+      <!--图片-->
+      <a target="_blank" href="http://www.guahao.com/hospital/b1f7abf0-562a-4672-834e-3b132f25c743" onmousedown="return _smartlog(this,'HPTP_1')" class="img">
+        <img src="http://img.guahao.cn/images/hospital/hsmall_b1f7abf0-562a-4672-834e-3b132f25c743.gif" alt="上海瑞金医院" title="上海瑞金医院">
+    </a>
+    <!--文字信息-->
+    <dl>
+        <dt>
+       
+            <a href="http://www.guahao.com/hospital/b1f7abf0-562a-4672-834e-3b132f25c743" onmousedown="return _smartlog(this,'HPTN_1')" target="_blank" title="上海瑞金医院">
+          上海瑞金医院
+            </a>
+            <span>三级甲等</span>
+        </dt>
+        <dd>
+            <p class="tel"><span title="021-64370045" class="fa fa-phone">&nbsp021-64370045</span></p>
+            <p class="addr"><span title="上海市黄浦区瑞金二路197号" class="fa fa-home">&nbsp上海市黄浦区瑞金二路197号</span>
+            
+            </p>
+        <!-- 推荐内容科室或者医生 -->
+        </dd>
+    </dl>
+    </div>
+     <!--评论-->
+    <div class="hospital-comment">
+          <div class="order-num g-1200px-show">
+                <p class="num">3.2万</p>
+                <p>就医经验</p>
+            </div>  
+            <div class="hop-comment">
+                <span  class="fa fa-thumbs-o-up dianzan" style="font-size: 2em;color:#5CA945;margin-top: 10px;left:0px;position: absolute"></span>
+                <label>导医服务：</label><span>88%</span>
+                <label>候诊时间：</label><span>87%</span>
+            </div>
+    </div>
+    <!--挂号按钮-->
+    <div class="guahao-btn">
+      <button class="btn btn-info">挂号</button>
+    </div>
+  </div>
+  <div class="hospital_box">
+    <div class="hospital_total">
+      <!--图片-->
+      <a target="_blank" href="http://www.guahao.com/hospital/b1f7abf0-562a-4672-834e-3b132f25c743" onmousedown="return _smartlog(this,'HPTP_1')" class="img">
+        <img src="http://img.guahao.cn/images/hospital/hsmall_b1f7abf0-562a-4672-834e-3b132f25c743.gif" alt="上海瑞金医院" title="上海瑞金医院">
+    </a>
+    <!--文字信息-->
+    <dl>
+        <dt>
+       
+            <a href="http://www.guahao.com/hospital/b1f7abf0-562a-4672-834e-3b132f25c743" onmousedown="return _smartlog(this,'HPTN_1')" target="_blank" title="上海瑞金医院">
+          上海瑞金医院
+            </a>
+            <span>三级甲等</span>
+        </dt>
+        <dd>
+            <p class="tel"><span title="021-64370045" class="fa fa-phone">&nbsp021-64370045</span></p>
+            <p class="addr"><span title="上海市黄浦区瑞金二路197号" class="fa fa-home">&nbsp上海市黄浦区瑞金二路197号</span>
+            
+            </p>
+        <!-- 推荐内容科室或者医生 -->
+        </dd>
+    </dl>
+    </div>
+     <!--评论-->
+    <div class="hospital-comment">
+          <div class="order-num g-1200px-show">
+                <p class="num">3.2万</p>
+                <p>就医经验</p>
+            </div>  
+            <div class="hop-comment">
+                <span  class="fa fa-thumbs-o-up dianzan" style="font-size: 2em;color:#5CA945;margin-top: 10px;left:0px;position: absolute"></span>
+                <label>导医服务：</label><span>88%</span>
+                <label>候诊时间：</label><span>87%</span>
+            </div>
+    </div>
+    <!--挂号按钮-->
+    <div class="guahao-btn">
+      <button class="btn btn-info">挂号</button>
+    </div>
+  </div>
+  <div class="hospital_box">
+    <div class="hospital_total">
+      <!--图片-->
+      <a target="_blank" href="http://www.guahao.com/hospital/b1f7abf0-562a-4672-834e-3b132f25c743" onmousedown="return _smartlog(this,'HPTP_1')" class="img">
+        <img src="http://img.guahao.cn/images/hospital/hsmall_b1f7abf0-562a-4672-834e-3b132f25c743.gif" alt="上海瑞金医院" title="上海瑞金医院">
+    </a>
+    <!--文字信息-->
+    <dl>
+        <dt>
+       
+            <a href="http://www.guahao.com/hospital/b1f7abf0-562a-4672-834e-3b132f25c743" onmousedown="return _smartlog(this,'HPTN_1')" target="_blank" title="上海瑞金医院">
+          上海瑞金医院
+            </a>
+            <span>三级甲等</span>
+        </dt>
+        <dd>
+            <p class="tel"><span title="021-64370045" class="fa fa-phone">&nbsp021-64370045</span></p>
+            <p class="addr"><span title="上海市黄浦区瑞金二路197号" class="fa fa-home">&nbsp上海市黄浦区瑞金二路197号</span>
+            
+            </p>
+        <!-- 推荐内容科室或者医生 -->
+        </dd>
+    </dl>
+    </div>
+     <!--评论-->
+    <div class="hospital-comment">
+          <div class="order-num g-1200px-show">
+                <p class="num">3.2万</p>
+                <p>就医经验</p>
+            </div>  
+            <div class="hop-comment">
+                <span  class="fa fa-thumbs-o-up dianzan" style="font-size: 2em;color:#5CA945;margin-top: 10px;left:0px;"></span>
+                <label>导医服务：</label><span>88%</span>
+                <label>候诊时间：</label><span>87%</span>
+            </div>
+    </div>
+    <!--挂号按钮-->
+    <div class="guahao-btn">
+      <button class="btn btn-info">挂号</button>
+    </div>
+  </div>
+  <div class="hospital_box">
+    <div class="hospital_total">
+      <!--图片-->
+      <a target="_blank" href="http://www.guahao.com/hospital/b1f7abf0-562a-4672-834e-3b132f25c743" onmousedown="return _smartlog(this,'HPTP_1')" class="img">
+        <img src="http://img.guahao.cn/images/hospital/hsmall_b1f7abf0-562a-4672-834e-3b132f25c743.gif" alt="上海瑞金医院" title="上海瑞金医院">
+    </a>
+    <!--文字信息-->
+    <dl>
+        <dt>
+       
+            <a href="http://www.guahao.com/hospital/b1f7abf0-562a-4672-834e-3b132f25c743" onmousedown="return _smartlog(this,'HPTN_1')" target="_blank" title="上海瑞金医院">
+          上海瑞金医院
+            </a>
+            <span>三级甲等</span>
+        </dt>
+        <dd>
+            <p class="tel"><span title="021-64370045" class="fa fa-phone">&nbsp021-64370045</span></p>
+            <p class="addr"><span title="上海市黄浦区瑞金二路197号" class="fa fa-home">&nbsp上海市黄浦区瑞金二路197号</span>
+            
+            </p>
+        <!-- 推荐内容科室或者医生 -->
+        </dd>
+    </dl>
+    </div>
+     <!--评论-->
+    <div class="hospital-comment">
+          <div class="order-num g-1200px-show">
+                <p class="num">3.2万</p>
+                <p>就医经验</p>
+            </div>  
+            <div class="hop-comment">
+                <span  class="fa fa-thumbs-o-up dianzan" style="font-size: 2em;color:#5CA945;margin-top: 10px;left:0px;position: absolute"></span>
+                <label>导医服务：</label><span>88%</span>
+                <label>候诊时间：</label><span>87%</span>
+            </div>
+    </div>
+    <!--挂号按钮-->
+    <div class="guahao-btn">
+      <button class="btn btn-info">挂号</button>
+    </div>
+  </div>
+</div>
+
+</div>
+<!--底部-->
+<div id="bottom" class="bg_color_gray">
+    <div id="logo" class="color_light_gray align_center" >
+      <i  class="fa fa-stethoscope fa-lg color_light_gray"> </i>
+      <b >医院挂号平台</b>
+    </div>
+    <div class="align_center">
+      <i class="color_light_gray">©copyright 2014 </i>
+    </div>
+    <div class="align_center ">
+      <span><a href="#">帮助</a></span>
+      <span>|</span>
+      <span><a href="#">意见反馈</a></span>
+      <span>|</span>
+      <span><a href="#">投诉举报</a></span>
+      <span>|</span>
+      <span><a href="#">加入我们</a></span>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+
+</body>
+</html>
+      
