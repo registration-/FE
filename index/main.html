@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></style>
+    <title>医院挂号系统</title>
+    <link rel="stylesheet" href="../Css/main.css"></link>
+    <link rel="stylesheet" href="../Css/bootstrap.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="../Css/login.css"></link>
+    <link rel="stylesheet" type="text/css" href="../Css/confirm.css">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="../Js/bootstrap.min.js"></script>
+    <script src="../Js/main.js"></script>
+    <script src="../Js/news.js"></script>
+    <script type="text/javascript" src="../Js/login.js"></script>
+    <script src="../Js/by-hospital.js"></script>
+  <link rel="stylesheet" href="../Css/font-awesome/css/font-awesome.min.css" ></link>
+  
+</head>
+<body>
+  <div id="head" class="col-lg-12" >
+    <div id="logo" class="margin_left1">
+      <i  class="fa fa-stethoscope fa-lg color_pink"> </i>
+      <b >医院挂号平台</b>
+    </div>
+    <!--标题-->
+    <nav id="navigation1" class="navbar navbar-primary stickUp" role="navigation" >
+      <div>
+        <ul class="nav nav-pills " >
+          <li id="nav1" class="active"><a href="#">主页</a></li>
+          <li id="nav2"><a href="#">关于我们</a></li>
+          <li id="nav3"><a href="#">登陆</a></li>
+          <li id="nav4"><a href="#">注册</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <br />
+  <br />
+  <br />
+  <br /><br />
+  <!--搜索框-->
+  <form id="search" role="form" style="" class="list-inline">
+    <input id="search1" type="text" class="form-control"  placeholder="搜索医院、科室"></input>
+    <i class="fa fa-search fa-lg btn" ></i>
+  </form>
+  <!--预约导航-->
+  <div id="appointment" class="appoint_min_width">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="main.html"> 首页 </a></li>
+      <li><a href="hospital_list.html">按医院预约</a></li>
+      <li><a href="by_keshi.html">按科室预约</a></li>
+    </ul>
+    <!-- 快速预约 -->
+    <div id="fastAppointment" class="inline_block select_min_width">
+      <p class="text-warning">快速预约</p>
+      <hr />
+      <!--地区下拉列表-->
+      <div >
+        <label id="label1">地区：</label>
+        <!--地区选择-->
+        <select id="select1" >
+          <option selected="selected">选择</option>
+          <option>北京</option>
+          <option>上海</option>
+          <option>天津</option>
+        </select>
+        <label id="label4">城市:&nbsp</label>
+        <select id="select2" >
+          <option selected="selected">选择</option>
+          <option>北京</option>
+          <option>上海</option>
+          <option>天津</option>
+        </select>
+      </div>
+      <!--医院选择-->
+      <div >
+        <label id="label2">医院：</label>
+        
+        <select id="select3" >
+          <option selected="selected">选择</option>
+          <option>北京</option>
+          <option>上海</option>
+          <option>天津</option>
+        </select>
+        
+      </div>
+      <!--科室选择-->
+      <div style="overflow:hidden;width:100%;">
+        <label id="label3">科室：</label>
+        
+        <select id="select4" >
+          <option selected="selected">选择</option>
+          <option>北京</option>
+          <option>上海</option>
+          <option>天津</option>
+        </select>
+        <button class="btn btn-success margin_top1">提交预约</button>
+      </div>
+    </div>
+    <!--新闻部分-->
+    <div id="content" class="inline_block" >
+      <div id="main">
+        
+        <div class="sub_box">
+          <div id="p-select" class="sub_nav">
+            <div class="sub_more"><a href="http://www.guahao.com/kandian/" onfocus="this.blur()" title="查看更多健康贴士" style="font-family: Tahoma; font-size: 12px;" target="_blank">更多>></a></div>
+            <div class="sub_no" id="bd1lfsj">
+              <ul>
+                <li class="show">1</li><li class="">2</li><li class="">3</li><li class="">4</li><li class="">5</li>
+              </ul>
+            </div>
+          </div>
+          <div id="bd1lfimg">
+            <div>
+            <dl class="show"></dl>
+            <dl class="">
+              <dt><a onmousedown="return _smartlog(this,'RAD_1')" target="_blank" href="http://www.guahao.com/userapp"><img title="微医" alt="微医" src="http://img.guahao.cn/portal_upload/rollingnews/1414664245500.jpg"></a></dt>
+              
+            </dl>
+            <dl class="">
+              <dt><a onmousedown="return _smartlog(this,'RAD_2')" target="_blank" href="http://www.guahao.com/yzwy"><img title="医者无忧险" alt="医者无忧险" src="http://img.guahao.cn/portal_upload/rollingnews/1413883704959.jpg"></a></dt>
+              
+            </dl>
+            <dl class="">
+              <dt><a onmousedown="return _smartlog(this,'RAD_3')" target="_blank" href="http://www.guahao.com/trip/salveDay"><img  title="名老中医膏方节" alt="名老中医膏方节" src="http://img.guahao.cn/portal_upload/rollingnews/1413364768113.jpg"></a></dt>
+              
+            </dl>
+            <dl class="">
+              <dt><a onmousedown="return _smartlog(this,'RAD_4')" target="_blank" href="http://www.guahao.com/kandian/61394"><img title="如何提高宝宝的抵抗力？" alt="如何提高宝宝的抵抗力？" src="http://img.guahao.cn/portal_upload/rollingnews/1414572083457.jpg"></a></dt>
+              
+            </dl>
+            <dl class="">
+              <dt><a onmousedown="return _smartlog(this,'RAD_5')" target="_blank" href="http://www.guahao.com/mediafocus/detail/816"><img title="京城好医生" alt="京城好医生" src="http://img.guahao.cn/portal_upload/rollingnews/1414478488386.jpg"></a></dt>
+              
+            </dl>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">movec();</script>
+    </div>
+  </div>
+  <!--注册-->
+  <div id="rigister" class="inline_block select_min_width" >
+    <!-- 加入我们 -->
+    <div>
+      <p class="text-success" style="font-size:1.2em">加入我们</p>
+      <hr />
+    </div>
+    <!-- 医生注册 -->
+    <div class="theme-buy">
+      <button class="btn btn-warning btn_long theme-login" href="javascript:;">
+      <span class="fa fa-user-md"></span>
+      <span >登陆</span>
+      </button>
+    </div>
+    <!-- 用户注册 -->
+    <div >
+      <button class="btn btn-danger btn_long margin_top1">
+      <span class="fa fa-user"></span>
+      <span >注册</span>
+      </button>
+    </div>
+    <!-- 已有账号，直接登陆 -->
+    <hr />
+    <div class="">
+      <span>已有账号，直接</span>
+      <span><a href="#" class="text-success">登陆</a></span>
+    </div>
+  </div>
+</div>
+<div class="theme-popover">
+  <div class="theme-poptit">
+    <a href="javascript:;" title="关闭" class="close">×</a>
+    <h3>欢迎来到医院挂号平台！</h3>
+  </div>
+  <div class="theme-popbod dform">
+    <form class="theme-signin" name="loginform" action="" method="post">
+      <ol>
+        <li><h4>欢迎登陆，请输入用户名及密码！</h4></li>
+        <li><strong>用户名：</strong><input class="ipt" type="text" name="username" size="20" /></li>
+        <li><strong>密码：</strong><input class="ipt" type="password" name="password" size="20" /></li>
+        <li> <input class="btn btn-primary" type="submit" name="login" value=" 登 录 "  />
+        <a href="zhuce.html"><input class="btn btn-primary" type="button" name="register" value=" 注 册 " />
+      </a>
+    </li>
+  </ol>
+</form>
+</div>
+</div>
+<div class="theme-popover-mask"></div>
+<!--快速查找-->
+<div class="fast-search">
+<!--按医院查找-->
+<div  class="by-hospital">
+<div  class="text-warning">按医院查找</div>
+<hr/>
+<div class="tabs text-success">
+  <p>
+  <a id="hospital-a1" class="on" href="http://www.guahao.com/hospital/areahospitals?p=%E4%B8%8A%E6%B5%B7" target="_blank"  data-id="2">上海</a>
+  <a id="hospital-a2" href="http://www.guahao.com/hospital/areahospitals?p=%E6%B1%9F%E8%8B%8F" target="_blank"  data-id="2">江苏</a>
+  <a id="hospital-a3" class="" href="http://www.guahao.com/hospital/areahospitals?p=%E5%B9%BF%E4%B8%9C" target="_blank"  data-id="2">广东</a>
+  <a id="hospital-a4" class="" href="http://www.guahao.com/hospital/areahospitals?p=%E5%B1%B1%E8%A5%BF" target="_blank"  data-id="2">山西</a>
+  <a id="hospital-a5" class="" href="http://www.guahao.com/hospital/areahospitals?p=%E5%8C%97%E4%BA%AC" target="_blank"  data-id="2">北京</a>
+  <a id="hospital-a6" href="http://www.guahao.com/hospital/areahospitals?p=%E5%A4%A9%E6%B4%A5" target="_blank"  data-id="2">天津</a>
+  <a id="hospital-a7" href="http://www.guahao.com/hospital/areahospitals?p=%E6%B9%96%E5%8C%97" target="_blank"  data-id="2">湖北</a>
+  <a id="<hospital-a8></hospital-a8>" href="http://www.guahao.com/hospital/areahospitals?pi=all&amp;ci=all&amp;fg=1" target="_blank" class="more" >
+    <span class="g-more">其它地区<i></i></span>
+  </a>
+  </p>
+</div>
+<!--医院列表-->
+<div class="hospital-list">
+  <ul id="list-content" style="display:block">
+    
+  </ul>
+</div>
+</div>
+</div>
+<!--底部-->
+<div id="bottom" class="bg_color_gray">
+<div id="logo" class="color_light_gray align_center" >
+<i  class="fa fa-stethoscope fa-lg color_light_gray"> </i>
+<b >医院挂号平台</b>
+</div>
+<div class="align_center">
+<i class="color_light_gray">©copyright 2014 </i>
+</div>
+<div class="align_center ">
+<span><a href="#">帮助</a></span>
+<span>|</span>
+<span><a href="#">意见反馈</a></span>
+<span>|</span>
+<span><a href="#">投诉举报</a></span>
+<span>|</span>
+<span><a href="#">加入我们</a></span>
+</div>
+</div>
+<br />
+<br />
+<br />
+<br />
+</body>
+</html>
