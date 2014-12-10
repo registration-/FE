@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+$(document).ready(function($) {
   $('.theme-login').click(function(){
     $('.theme-popover-mask').fadeIn(100);
     $('.theme-popover').slideDown(200);

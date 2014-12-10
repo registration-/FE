@@ -73,3 +73,50 @@
 	padding: 10px 10px 10px 60px;
 	float: left;
 }
+
+.city-list {
+    z-index:9999;
+    /*position:fixed;*/
+    /*top:245px;*/
+    /*left:260px;*/
+    /*width:3000px;*/
+    height:160px;
+    /*margin:-180px 0 0 -330px;*/
+    border-radius:5px;
+    border:solid 2px #fff;
+    background-color:#fff;
+    display:none;
+    box-shadow: 0 0 10px #666;
+    overflow: hidden;
+  font-size: 1.2em;
+}
+.list-group a{
+  text-align: center;
+  float: left;
+  margin-left:2px; 
+  width: 110px; 
+  color: #888;
+  cursor:pointer;
+  background:none repeat scroll 0% 0% #F5F5F5;
+}
+.list-group a:hover{
+  text-decoration: none;
+  background-color: #aaa;
+}
+
+.list-title {
+    border-bottom:1px solid #ddd;
+    padding:12px;
+    position: relative;
+}
+.theme-title .close {
+    float:right;
+    color:#999;
+    padding:5px;
+    margin:-2px -5px -5px;
+    font:bold 14px/14px simsun;
+    text-shadow:0 1px 0 #ddd
+}
+.theme-title .close:hover {
+    color:#444;
+}
