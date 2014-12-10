@@ -447,16 +447,16 @@ h1,h2,h3,h4,h5,h6{
   margin-left: auto;
   margin-right: auto;
 }
-#list-content{
+.list-content{
   list-style: outside none none;
   overflow: hidden;
 }
-#list-content li{
+.list-content li{
   padding: 4px 0px 4px 20px;
   width: 285px;
   float: left;
 }
-#list-content a{
+.list-content a{
   
   display: block;
   font-size: 1.2em;
@@ -465,4 +465,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .on{
   background-color: #d1eeee;
+}
+.hide{
+  display: none;
 }
