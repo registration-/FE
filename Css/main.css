@@ -430,7 +430,7 @@ h1,h2,h3,h4,h5,h6{
 /**
  * select by disease
  */
-.by-disease {
+.by-condition {
   margin-top: 10px; 
   margin-left: auto;
   margin-right: auto;
@@ -439,30 +439,32 @@ h1,h2,h3,h4,h5,h6{
   padding:20px;
   overflow: hidden;
 }
-.di-subject {
+.con-subject {
   font-size: 100%;
+  margin-bottom: 5px;
   vertical-align: baseline;
   padding: 0 0 30px;
+  overflow: hidden;
   display: list-item; 
 }
-.di-subject label{
+.con-subject label{
   font-size: 15px;
   width: 20%;
   float: left;
 }
-.di-subject label a:hover {
+.con-subject label a:hover {
   background-color: #d1eeee;
   text-decoration: none;
 }
 
-.di-subject p {
+.con-subject p {
   float: left;
   width: 80%;
 }
-.di-subject p:after {
+.con-subject p:after {
   width: 50px;
 }
-.di-subject p span{
+.con-subject p span{
   float: left;
   margin-left:2px; 
   margin-bottom: 5px; 
@@ -470,7 +472,7 @@ h1,h2,h3,h4,h5,h6{
   font-size: 14px;
   cursor:pointer;
 }
-.di-subject p span a:hover{
+.con-subject p span a:hover{
   background-color: #d1eeee;
   text-decoration: none;
 }
