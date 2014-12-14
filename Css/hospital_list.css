@@ -73,6 +73,7 @@
 	padding: 10px 10px 10px 60px;
 	float: left;
 }
+
 #citylist{
     margin-left: 10px;
     background:#ffffff;
@@ -93,6 +94,43 @@
     color: black;
     font-size: 0.8em;
     text-decoration: none;
+
+
+
+.city-list {
+    z-index:9999;
+    /*position:fixed;*/
+    /*top:245px;*/
+    /*left:260px;*/
+    /*width:3000px;*/
+    /*height:160px;*/
+    /*margin:-180px 0 0 -330px;*/
+    border-radius:5px;
+    border:solid 2px #fff;
+    background-color:#fff;
+    display:none;
+    box-shadow: 0 0 10px #666;
+    overflow: hidden;
+  font-size: 1.2em;
+}
+.city-list-group a{
+  text-align: center;
+  float: left;
+  margin-left:2px; 
+  width: 110px; 
+  color: #888;
+  cursor:pointer;
+  background:none repeat scroll 0% 0% #F5F5F5;
+}
+.city-list-group a:hover{
+  text-decoration: none;
+  background-color: #aaa;
+}
+
+.city-list-title {
+    border-bottom:1px solid #ddd;
+    padding:12px;
+    position: relative;
 
 }
 .province-list li{
