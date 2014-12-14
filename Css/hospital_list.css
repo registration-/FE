@@ -73,3 +73,34 @@
 	padding: 10px 10px 10px 60px;
 	float: left;
 }
+#citylist{
+    margin-left: 10px;
+    background:#ffffff;
+    height:300px;
+    width:600px;
+    position:absolute;
+    display:none;
+    border: 2px solid #cdcdcd;
+    z-index: 1;
+    padding: 10px;
+}
+#citylist li{
+    list-style-type: none;
+     display: inline-block;
+     width: 110px;
+}
+#citylist a{
+    color: black;
+    font-size: 0.8em;
+    text-decoration: none;
+
+}
+.province-list li{
+   
+}
+.title{
+    margin-left: 40px;
+}
+#citylist a:hover{
+    color: green;
+}

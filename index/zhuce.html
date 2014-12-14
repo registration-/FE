@@ -24,7 +24,7 @@
         $("#getcode").click(function() { 
             
         AV.initialize('jgaupci1iv2ltiks0twcvh83ndo14m4v4ag5qcj11orl9gz0','o913ici5da0kowgifr0jpoqc3e7xcjcaj24y4fwydkanzzfx');
-        AV.Cloud.requestSmsCode('').then(function(){
+        AV.Cloud.requestSmsCode($("#phonenumber").val()).then(function(){
         //发送成功
         alert('发送成功');
         }, function(err){
@@ -87,13 +87,13 @@
         $.ajax({
             url: 'https://registration-jlxy.rhcloud.com/api/users',
             type: 'POST',
-            dataType: 'text',
+            dataType: 'json',
             data: info
         })
         .done(function(data) {
             console.log(data);
             alert("success");
-            // window.location.href=""
+            window.location.href="main.html"
         })
         .fail(function() {
             console.log("error");

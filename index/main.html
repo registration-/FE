@@ -8,11 +8,15 @@
     <link rel="stylesheet" type="text/css" href="../Css/login.css"></link>
     <link rel="stylesheet" type="text/css" href="../Css/confirm.css">
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-    <script src="../Js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../Js/admin-login.js"></script>
     <script src="../Js/main.js"></script>
     <script src="../Js/news.js"></script>
     <script type="text/javascript" src="../Js/login.js"></script>
     <script src="../Js/by-hospital.js"></script>
+    <script type="text/javascript" src="../Js/get-province.js"></script>
+     <script type="text/javascript" src="../Js/get-city.js"></script>
+     <script type="text/javascript" src="../Js/get-hospital.js"></script>
+    <script type="text/javascript" src="../Js/get-department.js"></script>
   <link rel="stylesheet" href="../Css/font-awesome/css/font-awesome.min.css" ></link>
   
 </head>
@@ -59,28 +63,22 @@
         <label id="label1">地区：</label>
         <!--地区选择-->
         <select id="select1" >
-          <option selected="selected">选择</option>
-          <option>北京</option>
-          <option>上海</option>
-          <option>天津</option>
+          <option id="option11" selected="selected" value='0'>选择</option>
+          
         </select>
         <label id="label4">城市:&nbsp</label>
-        <select id="select2" >
-          <option selected="selected">选择</option>
-          <option>北京</option>
-          <option>上海</option>
-          <option>天津</option>
+        <select id="select2" disabled>
+          <option id="option21" selected="selected" value='0'>选择</option>
+          
         </select>
       </div>
       <!--医院选择-->
       <div >
         <label id="label2">医院：</label>
         
-        <select id="select3" >
-          <option selected="selected">选择</option>
-          <option>北京</option>
-          <option>上海</option>
-          <option>天津</option>
+        <select id="select3" disabled>
+          <option id="option31" selected="selected" value='0'>选择</option>
+         
         </select>
         
       </div>
@@ -88,13 +86,13 @@
       <div style="overflow:hidden;width:100%;">
         <label id="label3">科室：</label>
         
-        <select id="select4" >
-          <option selected="selected">选择</option>
+        <select id="select4" disabled>
+          <option id="option41" selected="selected" value='0'>选择</option>
           <option>北京</option>
           <option>上海</option>
           <option>天津</option>
         </select>
-        <button class="btn btn-success margin_top1">提交预约</button>
+        <button class="btn btn-success margin_top1" style="margin-left:40px";>提交预约</button>
       </div>
     </div>
     <!--新闻部分-->
@@ -155,7 +153,7 @@
     </div>
     <!-- 用户注册 -->
     <div >
-      <button class="btn btn-danger btn_long margin_top1">
+      <button class="btn btn-danger btn_long margin_top1 admin-login">
       <span class="fa fa-user"></span>
       <span >管理员登录</span>
       </button>
@@ -168,6 +166,7 @@
     </div>
   </div>
 </div>
+<!--用户登录弹出窗口-->
 <div class="theme-popover">
   <div class="theme-poptit">
     <a href="javascript:;" title="关闭" class="close">×</a>
@@ -177,9 +176,9 @@
     <form class="theme-signin" name="loginform" action="" method="post">
       <ol>
         <li><h4>欢迎登陆，请输入用户名及密码！</h4></li>
-        <li><strong>用户名：</strong><input class="ipt" type="text" name="username" size="20" /></li>
-        <li><strong>密码：</strong><input class="ipt" type="password" name="password" size="20" /></li>
-        <li> <input class="btn btn-primary" type="submit" name="login" value=" 登 录 "  />
+        <li><strong>用户名：</strong><input id="username" class="ipt" type="text" name="username" size="20" /></li>
+        <li><strong>密码：</strong><input id="password" class="ipt" type="password" name="password" size="20" /></li>
+        <li> <input id="submit" class="btn btn-primary" type="submit" name="login" value=" 登 录 "  />
         <a href="zhuce.html"><input class="btn btn-primary" type="button" name="register" value=" 注 册 " />
       </a>
     </li>
@@ -188,6 +187,27 @@
 </div>
 </div>
 <div class="theme-popover-mask"></div>
+<!--管理员登录弹出窗口-->
+  <div class="admin-popover">
+      <div class="admin-poptit">
+        <a href="javascript:;" title="关闭" class="close">×</a>
+        <h3>欢迎来到医院挂号平台！</h3>
+      </div>
+      <div class="adm-popbod dform">
+        <form class="admin-signin" name="loginform" action="" method="post">
+          <ol>
+            <li><h4>欢迎登陆，请输入用户名及密码！</h4></li>
+            <li><strong>用户名：</strong><input id="admin-username" class="ipt" type="text" name="username" size="20" /></li>
+            <li><strong>密码：</strong><input id="admin-password" class="ipt" type="password" name="password" size="20" /></li>
+            <li> <input id="admin-submit" class="btn btn-primary" type="submit" name="login" value=" 登 录 "  />
+            <a href="#"><input class="btn btn-primary" type="button" name="register" value=" 注 册 " />
+          </a>
+        </li>
+      </ol>
+    </form>
+  </div>
+</div>
+<div class="admin-popover-mask"></div>
 <!--快速查找-->
 <div class="fast-search">
 <!--按医院查找-->
@@ -438,5 +458,6 @@
 <br />
 <br />
 <br />
+
 </body>
 </html>
