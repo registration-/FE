@@ -47,7 +47,16 @@ $(document).ready(function() {
       })
       .done(function(data) {
         console.log('success');
-        console.log(data);
+        $('.theme-popover-mask').fadeOut(100);
+        $('.theme-popover').slideUp(200);
+        $("#nav3").css('display', 'none');
+        $("#nav4").css('display', 'none');
+        $("#nav1").css('left', '120px');
+        $("#nav2").css('left', '120px');
+        $("#name")[0].style.display='block';
+        $("#name").append(info['account']);
+        
+
       })
       .fail(function(e) {
         console.log("error");
@@ -60,7 +69,7 @@ $(document).ready(function() {
 
   $("#admin-submit").click(function(event) {
     event.preventDefault();
-    
+
     var info = {
       "admin_account": $("#admin-username").val(),
       "admin_password": $("#admin-password").val()
@@ -74,9 +83,9 @@ $(document).ready(function() {
       })
       .done(function(data) {
         console.log('success');
-        console.log(data);
-        $('.theme-popover-mask').fadeOut(100);
-        $('.theme-popover').slideUp(200);
+        $('.admin-popover-mask').fadeOut(100);
+        $('.admin-popover').slideUp(200);
+
       })
       .fail(function(e) {
         console.log("error");
