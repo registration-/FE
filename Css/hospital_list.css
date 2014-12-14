@@ -74,6 +74,29 @@
 	float: left;
 }
 
+#citylist{
+    margin-left: 10px;
+    background:#ffffff;
+    height:300px;
+    width:600px;
+    position:absolute;
+    display:none;
+    border: 2px solid #cdcdcd;
+    z-index: 1;
+    padding: 10px;
+}
+#citylist li{
+    list-style-type: none;
+     display: inline-block;
+     width: 110px;
+}
+#citylist a{
+    color: black;
+    font-size: 0.8em;
+    text-decoration: none;
+
+
+
 .city-list {
     z-index:9999;
     /*position:fixed;*/
@@ -108,15 +131,14 @@
     border-bottom:1px solid #ddd;
     padding:12px;
     position: relative;
+
 }
-.theme-title .close {
-    float:right;
-    color:#999;
-    padding:5px;
-    margin:-2px -5px -5px;
-    font:bold 14px/14px simsun;
-    text-shadow:0 1px 0 #ddd
+.province-list li{
+   
 }
-.theme-title .close:hover {
-    color:#444;
+.title{
+    margin-left: 40px;
+}
+#citylist a:hover{
+    color: green;
 }

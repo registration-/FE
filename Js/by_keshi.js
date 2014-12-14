@@ -19,7 +19,7 @@ $(document).ready(function(){
 	var txt = new Array();
 	$("#keshi-a1").hover(function() {
 		
-		txt = ['<li><span class="fa fa-mail-forward text-info">&nbsp</span><a href="#">心血管内科  （554个相关疾病、 1898家相关医院、13083名相关医生）</a></li>'
+		txt = ['<li><span class="fa fa-mail-forward text-info">&nbsp</span><a href="neike_example.html">心血管内科  （554个相关疾病、 1898家相关医院、13083名相关医生）</a></li>'
 		,'<li><span class="fa fa-mail-forward text-info">&nbsp</span><a href="#">呼吸内科　（639个相关疾病、 1566家相关医院、7450名相关医生） </a></li>'
 		,'<li><span class="fa fa-mail-forward text-info">&nbsp</span><a href="#">消化内科　（791个相关疾病、 1708家相关医院、8459名相关医生） </a></li>'
 		,'<li><span class="fa fa-mail-forward text-info">&nbsp</span><a href="#">神经内科　（927个相关疾病、 1766家相关医院、10401名相关医生） </a></li>'
