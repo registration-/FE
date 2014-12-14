@@ -417,7 +417,16 @@ h1,h2,h3,h4,h5,h6{
   padding:20px;
   overflow: hidden;
 }
-.by-hospital .text-warning{
+.by-disease {
+  margin-top: 10px; 
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  border: solid 1px #cdcdcd;
+  padding:20px;
+  overflow: hidden;
+}
+.text-warning{
   font-size: 1.6em; 
   overflow: hidden;
 }

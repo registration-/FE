@@ -80,7 +80,7 @@
     /*top:245px;*/
     /*left:260px;*/
     /*width:3000px;*/
-    height:160px;
+    /*height:160px;*/
     /*margin:-180px 0 0 -330px;*/
     border-radius:5px;
     border:solid 2px #fff;
@@ -90,7 +90,7 @@
     overflow: hidden;
   font-size: 1.2em;
 }
-.list-group a{
+.city-list-group a{
   text-align: center;
   float: left;
   margin-left:2px; 
@@ -99,12 +99,12 @@
   cursor:pointer;
   background:none repeat scroll 0% 0% #F5F5F5;
 }
-.list-group a:hover{
+.city-list-group a:hover{
   text-decoration: none;
   background-color: #aaa;
 }
 
-.list-title {
+.city-list-title {
     border-bottom:1px solid #ddd;
     padding:12px;
     position: relative;
