@@ -1,6 +1,7 @@
 
 
 $(document).ready(function(){
+	
 	$("#hospital-a1").hover(function() {
 		var list = $('.list-content');
 		list.addClass('hide');
@@ -43,5 +44,6 @@ $(document).ready(function(){
 		list.addClass('hide');
 		list.eq(7).removeClass('hide');
 	});
+
 
 });

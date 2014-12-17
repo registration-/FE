@@ -98,12 +98,12 @@ color: #888;
   width: 200px;
 }
 #head{
-  
+  background: #528b8b;
   margin-top:6px;
  width:100%;
  height:150px;
  position:absolute;
- border-bottom: solid 5px #cdcdcd;
+ border-bottom: solid 1px #cdcdcd;
   
 }
 
@@ -220,7 +220,7 @@ color: #888;
   position:absolute;
   width:100%;
   height:150px;
-  margin-top: 200px;
+  margin-top: 100px;
  
 }
 
@@ -532,8 +532,24 @@ h1,h2,h3,h4,h5,h6{
 }
 #avatar{
   display: none;
+  width: 80px;
+  height: 80px;
+
 }
 #name{
   display: none;
+  font-size: 1.2em;
   padding: 10px;
 }
+#personal-info{
+ display: none;
+  font-size: 1.2em;
+  padding: 10px 0; 
+}
+#personal-info a{
+  text-decoration: none;
+  color: #434343;
+}
+#personal-info a:hover{
+  color: black;
+};

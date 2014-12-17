@@ -12,6 +12,30 @@
 
 
 $(document).ready(function(){
+	var sStorage = window.sessionStorage;
+	if(sStorage.isLogin == 1 )
+	{
+		$("#nav3").html('<a href="#">个人信息</a>');
+            
+            $("#nav4").css('display', 'none');
+            $("#nav1").css('left', '80px');
+            $("#nav2").css('left', '80px');
+            $("#nav3").css('left', '80px');
+            $("#name")[0].style.display='inline-block';
+            $("#name").append(sStorage.uname);
+            $("#personal-info")[0].style.display='inline-block';
+	}
+	else{
+            $("#nav3").html('<a class="theme-login">登陆</a>');
+            
+            $("#nav4").css('display', 'inline-block');
+            $("#nav1").css('left', '0px');
+            $("#nav2").css('left', '0px');
+            $("#nav3").css('left', '0px');
+            $("#name")[0].style.display='none';
+            $("#name").text('');
+            $("#personal-info")[0].style.display='none';
+          }
 	var counter = new Array();
 	for (var i = 0; i < 14; i++) {
 		counter[i]=true;
@@ -374,4 +398,17 @@ $("#keshi-a14").hover(function() {
 			counter[13] = false;
 		}
 	});
+
+  $("#logout").on('click',function(){
+            sStorage.isLogin = 0;
+            $("#nav3").html('<a class="theme-login">登陆</a>');
+            
+            $("#nav4").css('display', 'inline-block');
+            $("#nav1").css('left', '0px');
+            $("#nav2").css('left', '0px');
+            $("#nav3").css('left', '0px');
+            $("#name")[0].style.display='none';
+            $("#name").text('');
+            $("#personal-info")[0].style.display='none';
+  });
 });
