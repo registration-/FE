@@ -64,7 +64,7 @@ $(document).ready(function() {
     };
     console.log(info);
     $.ajax({
-        url: 'https://registration-jlxy.rhcloud.com/api/users/session',
+        url: 'http://api.registration.com/api/users/session',
         type: 'POST',
         dataType: 'json',
         data: info

@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	
 	$.ajax({
-		url: 'https://registration-jlxy.rhcloud.com/api/cities',
+		url: 'http://api.registration.com/api/cities',
 		type: 'GET',
 		dataType: 'json',
 		data: "",

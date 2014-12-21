@@ -57,7 +57,7 @@
                 "source_id":sStorage.doctor_id
             }
             $.ajax({
-                url: 'https://registration-jlxy.rhcloud.com/api/users/'+sStorage.id+'/registrations',
+                url: 'http://api.registration.com/api/users/'+sStorage.id+'/registrations',
                 type: 'POST',
                 dataType: 'json',
                 data: info

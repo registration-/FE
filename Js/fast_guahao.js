@@ -40,10 +40,10 @@ $(document).ready(function(){
   });
 
 	$.ajax({
-		url: 'https://registration-jlxy.rhcloud.com/api/hospitals/' + sStorage.hospital_id+'/doctors?department_id='+sStorage.department_id+'',
+		url: 'http://api.registration.com/api/hospitals/' + sStorage.hospital_id+'/doctors?department_id='+sStorage.department_id+'',
 		type: 'GET',
 		dataType: 'json',
-		data: "",
+		data: ""
 	})
 	.done(function(data) {
 		console.log("success");
@@ -68,7 +68,6 @@ $(document).ready(function(){
               +'</dd>'
             +'</dl>'
           +'</div>'
-          <!--擅长-->
           +'<div class="doc-skill">'
             +'<p><label>擅长：</label>'+data[key].good_at+'</p>'
           +'</div>'

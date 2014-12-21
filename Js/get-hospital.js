@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	var sStorage = sessionStorage;
 	$.ajax({
-		url: 'https://registration-jlxy.rhcloud.com/api/hospitals',
+		url: 'http://api.registration.com/api/hospitals',
 		type: 'GET',
 		dataType: 'json',
 		data: "",

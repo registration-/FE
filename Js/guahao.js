@@ -40,7 +40,7 @@ $(document).ready(function(){
   });
 
 	$.ajax({
-		url: 'https://registration-jlxy.rhcloud.com/api/hospitals/' + sStorage.hospital_id+'/doctors',
+		url: 'http://api.registration.com/api/hospitals/' + sStorage.hospital_id+'/doctors',
 		type: 'GET',
 		dataType: 'json',
 		data: "",
@@ -180,7 +180,7 @@ $(document).ready(function(){
     };
     console.log(info);
     $.ajax({
-        url: 'https://registration-jlxy.rhcloud.com/api/users/session',
+        url: 'http://api.registration.com/api/users/session',
         type: 'POST',
         dataType: 'json',
         data: info

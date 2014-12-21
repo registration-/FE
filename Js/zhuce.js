@@ -125,7 +125,7 @@ jQuery(document).ready(function() {
                         "phone": $("#phonenumber").val()
                     }
                     $.ajax({
-                            url: 'https://registration-jlxy.rhcloud.com/api/users',
+                            url: 'http://api.registration.com/api/users',
                             type: 'POST',
                             dataType: 'json',
                             data: info

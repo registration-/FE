@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$.ajax({
-		url: 'https://registration-jlxy.rhcloud.com/api/provinces',
+		url: 'http://api.registration.com/api/provinces',
 		type: 'GET',
 		dataType: 'json',
 		data: "",

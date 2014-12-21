@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 	<!--进入页面生成医院列表-->
 	$.ajax({
-						url: 'https://registration-jlxy.rhcloud.com/api/hospitals?city_id=73',
+						url: 'http://api.registration.com/api/hospitals?city_id=73',
 						type: 'GET',
 						dataType: 'json',
 						data: "",
@@ -108,7 +108,7 @@ $(document).ready(function(){
           }
 	var pro;
 	$.ajax({
-		url: 'https://registration-jlxy.rhcloud.com/api/provinces',
+		url: 'http://api.registration.com/api/provinces',
 		type: 'GET',
 		dataType: 'json',
 		data: "",
@@ -165,7 +165,7 @@ $(document).ready(function(){
 			var province = e.target.text;
 			
 			$.ajax({
-				url: 'https://registration-jlxy.rhcloud.com/api/cities',
+				url: 'http://api.registration.com/api/cities',
 				type: 'GET',
 				dataType: 'json',
 				data: "",
@@ -185,7 +185,7 @@ $(document).ready(function(){
 				$('#citylist').on('click',function(e){
 					var city = e.target.getAttribute("data-city");
 					$.ajax({
-						url: 'https://registration-jlxy.rhcloud.com/api/hospitals?city_id='+city+'',
+						url: 'http://api.registration.com/api/hospitals?city_id='+city+'',
 						type: 'GET',
 						dataType: 'json',
 						data: "",

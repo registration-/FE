@@ -29,7 +29,7 @@ $(document).ready(function() {
 
 
 		$.ajax({
-				url: 'https://registration-jlxy.rhcloud.com/api/hospitals/' + uid + '/departments',
+				url: 'http://api.registration.com/api/hospitals/' + uid + '/departments',
 				type: 'GET',
 				dataType: 'json',
 				data: "",
