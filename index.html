@@ -1,0 +1,808 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></style>
+    <title>医院挂号系统</title>
+    <link rel="stylesheet" href="./Css/main.css"></link>
+    <link rel="stylesheet" href="./Css/bootstrap.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="./Css/login.css"></link>
+    <link rel="stylesheet" type="text/css" href="./Css/confirm.css">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="./Js/main.js"></script>
+    <script src="./Js/news.js"></script>
+    <script type="text/javascript" src="./Js/login.js"></script>
+    <script src="./Js/by-hospital.js"></script>
+    <script type="text/javascript" src="./Js/get-province.js"></script>
+    <script type="text/javascript" src="./Js/get-city.js"></script>
+    <script type="text/javascript" src="./Js/get-hospital.js"></script>
+    <script type="text/javascript" src="./Js/get-department.js"></script>
+  <link rel="stylesheet" href="./Css/font-awesome/css/font-awesome.min.css" ></link>
+  
+</head>
+<body>
+  <div id="head" class="col-lg-12" >
+    <div id="logo" class="margin_left1">
+      <i  class="fa fa-stethoscope fa-lg color_pink"> </i>
+      <b >医院挂号平台</b>
+      <div>
+        <div id="name">您好：</div>
+        <div id="personal-info">|&nbsp<a>个人中心&nbsp</a>|&nbsp<a id="logout">注销</a></div>
+      </div>
+    </div>
+    <!--标题-->
+    <nav id="navigation1" class="navbar navbar-primary stickUp" role="navigation" >
+      <div>
+        <ul class="nav nav-pills " >
+          <li id="nav3"><a  class="theme-login">登陆</a></li>
+          <li id="nav4"><a href="index/zhuce.html">注册</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <br />
+  <br />
+  <br />
+  <br /><br />
+  <!--搜索框-->
+  <form id="search" role="form" style="" class="list-inline">
+    <input id="search1" type="text" class="form-control"  placeholder="搜索医院、科室"></input>
+    <i class="fa fa-search fa-lg btn" ></i>
+  </form>
+  <!--预约导航-->
+  <div id="appointment" class="appoint_min_width">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="index.html"> 首页 </a></li>
+      <li><a href="./hospital_list.html">按医院预约</a></li>
+      <li><a href="./by_keshi.html">按科室预约</a></li>
+    </ul>
+    <!-- 快速预约 -->
+    <div id="fastAppointment" class="inline_block select_min_width">
+      <p class="text-warning">快速预约</p>
+      <hr />
+      <!--地区下拉列表-->
+      <div >
+        <label id="label1">地区：</label>
+        <!--地区选择-->
+        <select id="select1" >
+          <option id="option11" selected="selected" value='0'>选择</option>
+          
+        </select>
+        <label id="label4">城市:&nbsp</label>
+        <select id="select2" disabled>
+          <option id="option21" selected="selected" value='0'>选择</option>
+          
+        </select>
+      </div>
+      <!--医院选择-->
+      <div >
+        <label id="label2">医院：</label>
+        
+        <select id="select3" disabled>
+          <option id="option31" selected="selected" value='0'>选择</option>
+          
+        </select>
+        
+      </div>
+      <!--科室选择-->
+      <div style="overflow:hidden;width:100%;">
+        <label id="label3">科室：</label>
+        
+        <select id="select4" disabled>
+          <option id="option41" selected="selected" value='0'>选择</option>
+          <option>北京</option>
+          <option>上海</option>
+          <option>天津</option>
+        </select>
+        <button id="fast_submit" class="btn btn-success margin_top1" style="margin-left:40px";>提交预约</button>
+      </div>
+    </div>
+    <!--新闻部分-->
+    <div id="content" class="inline_block" >
+      <div id="main">
+        
+        <div class="sub_box">
+          <div id="p-select" class="sub_nav">
+            <div class="sub_more"><a href="http://www.guahao.com/kandian/" onfocus="this.blur()" title="查看更多健康贴士" style="font-family: Tahoma; font-size: 12px;" target="_blank">更多>></a></div>
+            <div class="sub_no" id="bd1lfsj">
+              <ul>
+                <li class="show">1</li><li class="">2</li><li class="">3</li><li class="">4</li><li class="">5</li>
+              </ul>
+            </div>
+          </div>
+          <div id="bd1lfimg">
+            <div>
+            <dl class="show"></dl>
+            <dl class="">
+              <dt><a onmousedown="return _smartlog(this,'RAD_1')" target="_blank" href="http://www.guahao.com/userapp"><img title="微医" alt="微医" src="http://img.guahao.cn/portal_upload/rollingnews/1414664245500.jpg"></a></dt>
+              
+            </dl>
+            <dl class="">
+              <dt><a onmousedown="return _smartlog(this,'RAD_2')" target="_blank" href="http://www.guahao.com/yzwy"><img title="医者无忧险" alt="医者无忧险" src="http://img.guahao.cn/portal_upload/rollingnews/1413883704959.jpg"></a></dt>
+              
+            </dl>
+            <dl class="">
+              <dt><a onmousedown="return _smartlog(this,'RAD_3')" target="_blank" href="http://www.guahao.com/trip/salveDay"><img  title="名老中医膏方节" alt="名老中医膏方节" src="http://img.guahao.cn/portal_upload/rollingnews/1413364768113.jpg"></a></dt>
+              
+            </dl>
+            <dl class="">
+              <dt><a onmousedown="return _smartlog(this,'RAD_4')" target="_blank" href="http://www.guahao.com/kandian/61394"><img title="如何提高宝宝的抵抗力？" alt="如何提高宝宝的抵抗力？" src="http://img.guahao.cn/portal_upload/rollingnews/1414572083457.jpg"></a></dt>
+              
+            </dl>
+            <dl class="">
+              <dt><a onmousedown="return _smartlog(this,'RAD_5')" target="_blank" href="http://www.guahao.com/mediafocus/detail/816"><img title="京城好医生" alt="京城好医生" src="http://img.guahao.cn/portal_upload/rollingnews/1414478488386.jpg"></a></dt>
+              
+            </dl>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">movec();</script>
+    </div>
+  </div>
+  <!--注册-->
+  <div id="rigister" class="inline_block select_min_width" >
+    <!-- 加入我们 -->
+    <div>
+      <p class="text-success" style="font-size:1.2em">加入我们</p>
+      <hr />
+    </div>
+    <!-- 医生注册 -->
+    <div class="theme-buy">
+      <button class="btn btn-warning btn_long theme-login" href="javascript:;">
+      <span class="fa fa-user-md"></span>
+      <span >登录</span>
+      </button>
+    </div>
+    <!-- 用户注册 -->
+    <div >
+      <a href="./index/zhuce.html">
+        <button class="btn btn-danger btn_long margin_top1">
+        <span class="fa fa-user"></span>
+        <span >注册</span>
+        </button>
+      </a>
+    </div>
+    <!-- 已有账号，直接登陆 -->
+    <hr />
+    <div class="">
+      <span></span>
+      <span><a href="#" class="text-success">&nbsp</a></span>
+    </div>
+  </div>
+</div>
+<!--用户登录弹出窗口-->
+<div class="theme-popover">
+  <div class="theme-poptit">
+    <a href="javascript:;" title="关闭" class="close">×</a>
+    <h3>欢迎来到医院挂号平台</h3>
+  </div>
+  <div class="theme-popbod dform">
+    <form class="theme-signin" name="loginform" action="" method="post">
+      <ol>
+        <li><h4>欢迎登陆</h4></li>
+        <li><strong>用户名：</strong><input id="username" class="ipt" type="text" name="username" size="20" placeholder="请输入身份证/手机号/邮箱" /></li>
+        <li><strong>密码：</strong><input id="password" class="ipt" type="password" name="password" size="20" placeholder="请输入密码"/></li>
+        <li> <input id="submit" class="btn btn-primary" type="submit" name="login" value=" 登 录 "  />
+        <a href="./index/zhuce.html"><input class="btn btn-primary" type="button" name="register" value=" 注 册 " />
+      </a>
+    </li>
+  </ol>
+</form>
+</div>
+</div>
+<div class="theme-popover-mask"></div>
+<!--快速查找-->
+<div class="fast-search">
+<!--按医院查找-->
+<div  class="by-hospital">
+<div  class="text-warning">按医院查找</div>
+<hr/>
+<div class="tabs text-success">
+<p>
+<a id="hospital-a1" class="on" href="http://www.guahao.com/hospital/areahospitals?p=%E4%B8%8A%E6%B5%B7" target="_blank"  data-id="2">上海</a>
+<a id="hospital-a2" href="http://www.guahao.com/hospital/areahospitals?p=%E6%B1%9F%E8%8B%8F" target="_blank"  data-id="2">江苏</a>
+<a id="hospital-a3" class="" href="http://www.guahao.com/hospital/areahospitals?p=%E5%B9%BF%E4%B8%9C" target="_blank"  data-id="2">广东</a>
+<a id="hospital-a4" class="" href="http://www.guahao.com/hospital/areahospitals?p=%E5%B1%B1%E8%A5%BF" target="_blank"  data-id="2">山西</a>
+<a id="hospital-a5" class="" href="http://www.guahao.com/hospital/areahospitals?p=%E5%8C%97%E4%BA%AC" target="_blank"  data-id="2">北京</a>
+<a id="hospital-a6" href="http://www.guahao.com/hospital/areahospitals?p=%E5%A4%A9%E6%B4%A5" target="_blank"  data-id="2">天津</a>
+<a id="hospital-a7" href="http://www.guahao.com/hospital/areahospitals?p=%E6%B9%96%E5%8C%97" target="_blank"  data-id="2">湖北</a>
+<a id="hospital-a8" href="http://www.guahao.com/hospital/areahospitals?pi=all&amp;ci=all&amp;fg=1" target="_blank" class="more" >
+<span class="g-more">其它地区<i></i></span>
+</a>
+</p>
+</div>
+<!--医院列表-->
+<div class="hospital-list">
+<ul class="list-content">
+<li><a target='_blank' href='http://www.guahao.com/hospital/125336070937502'>复旦大学附属华山医院（总院）</a></li>
+<li><a target='_blank' href='http://www.guahao.com/hospital/0ff26372-929b-4041-b7b7-145d317aee07'>上海远大心胸医院</a></li>
+<li><a target='_blank' href='http://www.guahao.com/hospital/125358368239002'>复旦大学附属肿瘤医院</a></li>
+<li><a target='_blank' href='http://www.guahao.com/hospital/128229647014009'>上海中医药大学附属岳阳中西医院</a></li>
+<li><a target='_blank' href='http://www.guahao.com/hospital/125361059609302'>复旦大学附属眼耳鼻喉科医院</a></li>
+<li><a target='_blank' href='http://www.guahao.com/hospital/125336131920301'>复旦大学附属妇产科医院（黄浦）</a></li>
+<li><a target='_blank' href='http://www.guahao.com/hospital/125336070937502'>复旦大学附属中山医院</a></li>
+<li><a target='_blank' href='http://www.guahao.com/hospital/8f113a19-eee7-47b8-9517-2ad069a2f57a'> 上海长海医院</a></li>
+<li><a target='_blank' href='http://www.guahao.com/hospital/areahospitals?p=%E4%B8%8A%E6%B5%B7'>更多&raquo</a></li>
+</ul>
+<ul class="list-content hide">
+<li><a target="_blank" href="http://www.guahao.com/hospital/139288285354149">
+  常州市第二人民医院城中院区
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/BF314EAD23323ED3E040007F01004B66">
+  江苏省淮安市妇幼保健院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/BF314EAD23323ED3E040007F01004B66">
+  江苏省淮安市妇幼保健院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/134DF82972FD4B1CAFD1ED83232CA36B">
+  扬州市第一人民医院西区
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/138872494057004">
+  常州市第一人民医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/772166ec-a167-49e0-9dc8-5f18740fd235">
+  中国人民解放军第四五四医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/9a9f9277-c720-11e1-913c-5cf9dd2e7135">
+  苏州同济医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/46528631-1f15-405b-a475-c544055972fe">
+  苏州东吴中西医结合医院
+</a></li>
+<li>
+  <a href="http://www.guahao.com/hospital/areahospitals?p=江苏" target="_blank" class="g-more">更多<i></i></a>
+</li>
+</ul>
+<ul class="list-content hide">
+<li><a target="_blank" href="http://www.guahao.com/hospital/eba8a3ab-dcde-4538-9a7e-05c55732b5f8">
+  广东省中医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/05ba2f6c-ec92-4a58-a6d0-31befb5474ed">
+  中山大学附属第三医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/131054181815118">
+  广州医学院第三附属医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/9867e075-c720-11e1-913c-5cf9dd2e7135">
+  中国人民解放军第四二一医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/951d53e7-c295-4220-a4d9-2625ae12dbca">
+  深圳博爱医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/0517d1b1-270b-4a61-8bc6-52aa7d3c53c9">
+  深圳远东妇儿科医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/9867cd41-c720-11e1-913c-5cf9dd2e7135">
+  中国人民解放军第四五八医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/2dc713ce-cd32-4714-a338-0046cda9b7aa">
+  广州男科医院
+</a></li>
+<li><a href="http://www.guahao.com/hospital/areahospitals?p=广东" target="_blank" class="g-more">更多<i></i></a></li>
+</ul>
+<ul class="list-content hide">
+<li><a target="_blank" href="http://www.guahao.com/hospital/b006d12c-ba1c-4e49-a087-9abe65b37c30">
+  太原市妇幼保健院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/24aa58fa-deae-4856-ba27-f0edaf6b7e18">
+  山西医科大学第一医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/c1623fc3-1926-44df-9de4-1562c162add9">
+  山西省儿童医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/f27273e8-1101-4197-a808-3787d418a5ba">
+  太原市中心医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/f27273e8-1101-4197-a808-3787d418a5ba">
+  太原市中心医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/f27273e8-1101-4197-a808-3787d418a5ba">
+  太原市中心医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/f27273e8-1101-4197-a808-3787d418a5ba">
+  太原市中心医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/f27273e8-1101-4197-a808-3787d418a5ba">
+  太原市中心医院
+</a></li>
+<li><a href="http://www.guahao.com/hospital/areahospitals?p=山西" target="_blank" >更多<i></i></a></li>
+</ul>
+<ul class="list-content hide">
+<li><a target="_blank" href="http://www.guahao.com/hospital/5cee04f9-4cc8-4499-a35b-6f37f2dd8a74">
+  解放军总医院301医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/CCF26DB04E531DF9E040A8C0790228AB">
+  北京天坛医院特需门诊
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/fbcb6273-a5e0-467c-a142-77a6131f9b0f">
+  北京京军国际肝病医学研究院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/dc131929-114f-4b0b-84c1-201ee82e4008">
+  北京恒安中医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/95fedeed-685e-48f3-8471-a4c2e81f2754">
+  北京固生堂中医医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/69c4e5f4-c3a9-4683-af6e-7502986b0973">
+  北京凤凰妇科医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/35e296fb-4f87-4204-90b7-f92573264b6a">
+  北京京城皮肤病医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/a8a42629-ae63-434b-98ef-b271505c8171">
+  北京拜尔昊城口腔医院
+</a></li>
+<li><a href="http://www.guahao.com/hospital/areahospitals?p=北京" target="_blank" class="g-more" >更多<i></i></a></li>
+</ul>
+<ul class="list-content hide">
+<li><a target="_blank" href="http://www.guahao.com/hospital/08991199-fee5-48cc-b827-95eb0fdbd980">
+  天津市肿瘤医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/3e29f6db-19a4-4742-b5ab-1977d5c4cae0">
+  天津市环湖医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/71342d44-fd7b-4265-8240-e224e5f98c40">
+  天津武警医学院附属医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/cdb7e9ff-c0c4-4cbf-ab56-f2d4fe79ca65">
+  天津市天津医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/c98340e8-4fcf-4fd1-b047-26ccc57c01f2">
+  天津市宝坻区人民医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/9b1a4f51-6b00-4ec9-b278-fd019b787499">
+  天津津门中医医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/777eb0aa-be4f-49f7-a53c-88a39d448590">
+  天津市第二人民医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/FF0153A8EEA22010E0430F01A8C07495">
+  中国人民解放军第二七二医院
+</a></li>
+<li><a href="http://www.guahao.com/hospital/areahospitals?p=天津" target="_blank" class="g-more" >更多<i></i></a></li>
+</ul>
+<ul class="list-content hide">
+<li><a target="_blank" href="http://www.guahao.com/hospital/60cd2663-d69d-4f63-bc17-8618d6e5e609">
+  武汉同济医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/22fbe56c-13e2-4e34-9cee-24ab874b6b9c">
+  武汉协和医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/5257c66d-876b-4b34-98b6-1d34ead2df9c">
+  武汉大学口腔医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/650d530f-f856-4655-a301-13c40a44c43f">
+  武汉市普爱医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/561b78b0-927d-4de7-94b5-45d270d73a15">
+  湖北省肿瘤医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/c601649c-ad49-49d8-b641-a0b8d9310bd1">
+  武汉送子鸟不育不孕医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/f9d96eca-1a13-41b7-8431-397aa3c9a6ce">
+  武汉市第六医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/41c14107-e810-4fef-9426-51e98c2c341e">
+  武汉马应龙中西医结合肛肠医院
+</a></li>
+<li><a href="http://www.guahao.com/hospital/areahospitals?p=山西" target="_blank" class="g-more" >更多<i></i></a></li>
+</ul>
+<ul class="list-content hide">
+<li><a target="_blank" href="http://www.guahao.com/hospital/deb4ebca-0045-428f-89e8-26d5dcaa38b9">
+  [新疆]乌鲁木齐大西北皮肤病医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/64f9440a-dda7-4219-af06-cad2815359c2">
+  [山东]烟台毓璜顶医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/c723027b-49e1-4fcc-b434-d1d40fbda10e">
+  [浙江]杭州江城骨科医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/9866eee9-c720-11e1-913c-5cf9dd2e7135">
+  [福建]武警福建总队医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/448f9a19-8cd2-4ccf-a152-3930ec622d9f">
+  [湖南]中南大学湘雅医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/437f3368-0598-4f29-8313-f77ba65a3fb3">
+  [重庆]重庆协和医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/574ff151-1572-4695-b837-b8ba4f134067">
+  [重庆]重庆国宾妇产医院
+</a></li>
+<li><a target="_blank" href="http://www.guahao.com/hospital/b1e40637-32b1-4ba0-99fb-08fd99afd62d">
+  [重庆]重庆爱德华医院
+</a></li>
+<li><a href="http://www.guahao.com/hospital/areahospitals?p=全国" target="_blank" class="g-more" >更多<i></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="by-condition">
+<div class="text-warning">按疾病查找</div>
+<hr />
+<ul class="fs-left">
+<li class="con-subject">
+<label>
+<a href="http://www.guahao.com/search?q=%E5%86%85%E7%A7%91" target="_blank">内科</a>
+</label>
+<p>
+<span style="text-decoration:none;">
+<a href="http://www.guahao.com/search?q=%E7%B3%96%E5%B0%BF%E7%97%85" target="_blank" title="糖尿病">糖尿病</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E9%AB%98%E8%A1%80%E5%8E%8B" target="_blank" title="高血压">高血压</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%83%83%E7%82%8E" target="_blank" title="胃炎">胃炎</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E7%94%B2%E4%BA%A2" target="_blank" title="甲亢"  >甲亢</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E4%B9%99%E8%82%9D" target="_blank" title="乙肝">乙肝</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%86%A0%E5%BF%83%E7%97%85" target="_blank" title="冠心病">冠心病</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%82%9D%E7%A1%AC%E5%8C%96" target="_blank" title="肝硬化">肝硬化</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%82%9D%E7%A1%AC%E5%8C%96" target="_blank" title="肝硬化">肝硬化</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%A4%B1%E7%9C%A0" target="_blank" title="失眠">失眠</a>
+</span>
+</p>
+</li>
+<li class="con-subject">
+<label>
+<a href="http://www.guahao.com/search?q=%E5%A6%87%E7%A7%91" target="_blank" >妇科</a>
+</label>
+<p>
+<span>
+<a href="http://www.guahao.com/search?q=%E6%9C%88%E7%BB%8F%E4%B8%8D%E8%B0%83" target="_blank" title="月经不调" >月经不调</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E4%B8%8D%E5%AD%95%E4%B8%8D%E8%82%B2" target="_blank" title="不孕不育" >不孕不育</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%AD%90%E5%AE%AB%E8%82%8C%E7%98%A4" target="_blank" title="子宫肌瘤">子宫肌瘤</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%A4%9A%E5%9B%8A%E5%8D%B5%E5%B7%A2" target="_blank" title="多囊卵巢综合征" >多囊卵...</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%8D%B5%E5%B7%A2%E5%9B%8A%E8%82%BF" target="_blank" title="卵巢囊肿">卵巢囊肿</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E9%98%B4%E9%81%93%E7%82%8E" target="_blank" title="阴道炎">阴道炎</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%AE%AB%E9%A2%88%E7%B3%9C%E7%83%82" target="_blank" title="宫颈糜烂">宫颈糜烂</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%86%85%E5%88%86%E6%B3%8C%E5%A4%B1%E8%B0%83" target="_blank" title="内分泌失调">内分泌失调</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%AE%AB%E9%A2%88%E7%99%8C" target="_blank" title="宫颈癌">宫颈癌</a>
+</span>
+</p>
+</li>
+<li class="con-subject">
+<label><a href="http://www.guahao.com/search?q=%E5%84%BF%E7%A7%91" target="_blank" title="儿科" >儿科</a></label>
+<p>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%B0%8F%E5%84%BF%E5%93%AE%E5%96%98" target="_blank" title="小儿哮喘">小儿哮喘</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%B0%8F%E5%84%BF%E7%99%AB%E7%97%AB" target="_blank" title="小儿癫痫">小儿癫痫</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%B0%8F%E5%84%BF%E8%82%BA%E7%82%8E" target="_blank" title="小儿肺炎">小儿肺炎</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%B0%8F%E5%84%BF%E6%8A%BD%E5%8A%A8%E7%97%87" target="_blank" title="小儿抽动症">小儿抽动症</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E6%80%A7%E6%97%A9%E7%86%9F" target="_blank" title="性早熟"  >性早熟</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%B0%8F%E5%84%BF%E5%A4%9A%E5%8A%A8%E7%97%87" target="_blank" title="小儿多动症">小儿多动症</a>
+</span>
+</p>
+</li>
+<li class="con-subject">
+<label><a href="http://www.guahao.com/search?q=%E7%9A%AE%E8%82%A4%E7%A7%91" target="_blank" >皮肤科</a></label>
+<p>
+<span>
+<a href="http://www.guahao.com/search?q=%E6%B9%BF%E7%96%B9" target="_blank" title="湿疹" >湿疹</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E7%99%BD%E7%99%9C%E9%A3%8E" target="_blank" title="白癜风" >白癜风</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E7%89%9B%E7%9A%AE%E7%99%A3" target="_blank" title="牛皮癣">牛皮癣</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%8D%A8%E9%BA%BB%E7%96%B9" target="_blank" title="荨麻疹">荨麻疹</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%84%B1%E5%8F%91" target="_blank" title="脱发">脱发</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E7%97%A4%E7%96%AE" target="_blank" title="痤疮">痤疮</a>
+</span>
+</p>
+</li>
+</ul>
+<ul class="fs-right">
+<li class='con-subject'>
+<label><a href="http://www.guahao.com/search?q=%E5%A4%96%E7%A7%91" target="_blank"  >外科</a></label>
+<p>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%89%8D%E5%88%97%E8%85%BA%E7%82%8E" target="_blank"  title="前列腺炎" >前列腺炎</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E4%B9%B3%E8%85%BA%E5%A2%9E%E7%94%9F" target="_blank"  title="乳腺增生">乳腺增生</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E7%94%B2%E7%8A%B6%E8%85%BA%E7%98%A4" target="_blank"  title="甲状腺瘤">甲状腺瘤</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%A1%80%E7%AE%A1%E7%98%A4" target="_blank"  title="血管瘤">血管瘤</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E6%97%A9%E6%B3%84" target="_blank"  title="早泄" >早泄</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E9%9D%99%E8%84%89%E6%9B%B2%E5%BC%A0" target="_blank" title="静脉曲张">静脉曲张</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E9%A2%88%E6%A4%8E%E7%97%85" target="_blank"  title="颈椎病" >颈椎病</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%85%B0%E6%A4%8E%E9%97%B4%E7%9B%98" target="_blank"  title="腰椎间盘突出症">腰椎间...</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E7%97%94%E7%96%AE" target="_blank"  title="痔疮">痔疮</a>
+</span>
+</p>
+</li>
+<li class="con-subject">
+<label><a href="http://www.guahao.com/search?q=%E8%82%BF%E7%98%A4%E7%A7%91" target="_blank" >肿瘤科</a></label>
+<p>
+<span>
+<a href="http://www.guahao.com/search?q=%E4%B9%B3%E8%85%BA%E7%99%8C" target="_blank"  title="乳腺癌" >乳腺癌</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%82%BA%E7%99%8C" target="_blank"  title="肺癌" >肺癌</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%83%83%E7%99%8C" target="_blank"  title="胃癌">胃癌</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%82%9D%E7%99%8C" target="_blank"  title="肝癌" >肝癌</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E7%9B%B4%E8%82%A0%E7%99%8C" target="_blank"  title="直肠癌">直肠癌</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E7%94%B2%E7%8A%B6%E8%85%BA%E7%99%8C" target="_blank"  title="甲状腺癌">甲状腺癌</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%83%B0%E8%85%BA%E7%99%8C" target="_blank"  title="胰腺癌">胰腺癌</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E6%B7%8B%E5%B7%B4%E7%98%A4" target="_blank"  title="淋巴瘤">淋巴瘤</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E9%A3%9F%E9%81%93%E7%99%8C" target="_blank"  title="食道癌">食道癌</a>
+</span>
+</p>
+</li>
+<li class="con-subject">
+<label><a href="http://www.guahao.com/search?q=%E4%BA%94%E5%AE%98%E7%A7%91" target="_blank" >五官科</a></label>
+<p>
+<span>
+<a href="http://www.guahao.com/search?q=%E9%BC%BB%E7%82%8E" target="_blank"  title="鼻炎"  >鼻炎</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%80%B3%E9%B8%A3" target="_blank"   title="耳鸣"  >耳鸣</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E7%99%BD%E5%86%85%E9%9A%9C" target="_blank"   title="白内障">白内障</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E9%9D%92%E5%85%89%E7%9C%BC" target="_blank"   title="青光眼">青光眼</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E7%89%99%E5%91%A8%E7%82%8E" target="_blank"   title="牙周炎">牙周炎</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%BF%91%E8%A7%86" target="_blank"   title="近视">近视</a>
+</span>
+</p>
+</li>
+</ul>
+</div>
+<div class="by-condition">
+<div class="text-warning">按科室查找</div>
+<hr />
+<ul class="fs-left">
+<li class="con-subject">
+<label><a href="http://www.guahao.com/search?q=%E5%86%85%E7%A7%91" target="_blank"  >内科</a></label>
+<p>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%BF%83%E8%A1%80%E7%AE%A1%E5%86%85%E7%A7%91" target="_blank"   title="心血管内科">心血管内科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%91%BC%E5%90%B8%E5%86%85%E7%A7%91" target="_blank"   title="呼吸内科">呼吸内科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E6%B6%88%E5%8C%96%E5%86%85%E7%A7%91" target="_blank"   title="消化内科" >消化内科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E7%A5%9E%E7%BB%8F%E5%86%85%E7%A7%91" target="_blank"   title="神经内科" >神经内科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%82%BE%E5%86%85%E7%A7%91" target="_blank"   title="肾内科">肾内科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%A1%80%E6%B6%B2%E7%A7%91" target="_blank"   title="血液科">血液科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E9%A3%8E%E6%B9%BF%E5%85%8D%E7%96%AB%E7%A7%91" target="_blank"   title="风湿免疫科">风湿免疫科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E6%84%9F%E6%9F%93%E7%A7%91" target="_blank"   title="感染科">感染科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%86%85%E5%88%86%E6%B3%8C%E7%A7%91" target="_blank"   title="内分泌科" >内分泌科</a>
+</span>
+</p>
+</li>
+<li class="con-subject">
+<label><a href="http://www.guahao.com/search?q=%E9%AA%A8%E7%A7%91" target="_blank"  >骨科</a></label>
+<p>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%84%8A%E6%9F%B1%E5%A4%96%E7%A7%91" target="_blank"   title="脊柱外科">脊柱外科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%85%B3%E8%8A%82%E5%A4%96%E7%A7%91" target="_blank"   title="关节外科" >关节外科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E6%89%8B%E5%A4%96%E7%A7%91" target="_blank"   title="手外科">手外科</a>
+</span>
+</p>
+</li>
+<li class="con-subject">
+<label><a href="#" title="五官">五官</a></label>
+<p>
+<span>
+<a href="http://www.guahao.com/search?q=%E7%9C%BC%E7%A7%91" target="_blank"   title="眼科" >眼科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%80%B3%E9%BC%BB%E5%92%BD%E5%96%89%E7%A7%91" target="_blank"   title="耳鼻咽喉科">耳鼻咽喉科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%8F%A3%E8%85%94%E7%A7%91" target="_blank"   title="口腔科">口腔科</a>
+</span>
+</p>
+</li>
+<li class="con-subject">
+<label><a href="http://www.guahao.com/search?q=%E5%A6%87%E4%BA%A7%E7%A7%91" target="_blank"  >妇产科</a></label>
+<p>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%A6%87%E7%A7%91" target="_blank"   title="妇科" >妇科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E4%BA%A7%E7%A7%91" target="_blank"   title="产科">产科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E7%94%9F%E6%AE%96%E4%B8%8E%E9%81%97%E4%BC%A0" target="_blank"   title="生殖与遗传">生殖与遗传</a>
+</span>
+</p>
+</li>
+</ul>
+<ul class="fs-right">
+<li class="con-subject">
+<label><a href="http://www.guahao.com/search?q=%E5%A4%96%E7%A7%91" target="_blank"  >外科</a></label>
+<p>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%83%B8%E5%A4%96%E7%A7%91" target="_blank"   title="胸外科">胸外科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E6%99%AE%E5%A4%96%E7%A7%91" target="_blank"   title="普外科">普外科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E7%A5%9E%E7%BB%8F%E5%A4%96%E7%A7%91" target="_blank"   title="神经外科">神经外科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%82%9D%E8%83%86%E5%A4%96%E7%A7%91" target="_blank"   title="肝胆外科">肝胆外科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%82%9B%E8%82%A0%E5%A4%96%E7%A7%91" target="_blank"   title="肛肠外科" >肛肠外科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E6%B3%8C%E5%B0%BF%E5%A4%96%E7%A7%91" target="_blank"   title="泌尿外科" >泌尿外科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%A1%80%E7%AE%A1%E5%A4%96%E7%A7%91" target="_blank"   title="血管外科">血管外科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E6%95%B4%E5%BD%A2%E5%A4%96%E7%A7%91" target="_blank"   title="整形外科">整形外科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E4%B9%B3%E8%85%BA%E5%A4%96%E7%A7%91" target="_blank"   title="乳腺外科" >乳腺外科</a>
+</span>
+</p>
+</li>
+<li class="con-subject">
+<label>其他</label>
+<p>
+<span>
+<a href="http://www.guahao.com/search?q=%E7%9A%AE%E8%82%A4%E6%80%A7%E7%97%85%E7%A7%91" target="_blank"   title="皮肤性病科" >皮肤性病科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E8%82%BF%E7%98%A4%E7%A7%91" target="_blank"   title="肿瘤科">肿瘤科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E4%B8%AD%E5%8C%BB%E7%A7%91" target="_blank"   title="中医科">中医科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E7%94%B7%E7%A7%91" target="_blank"   title="男科" >男科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E6%94%BE%E5%B0%84%E7%A7%91" target="_blank"   title="放射科">放射科</a>
+</span>
+<span>
+<a href="http://disease.guahao.com/department/7f68bf48-cff3-11e1-831f-5cf9dd2e7135/" target="_blank"   title="超声科" >超声科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%BF%83%E7%90%86%E7%A7%91" target="_blank"   title="心理科">心理科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E7%B2%BE%E7%A5%9E%E7%A7%91" target="_blank"   title="精神科">精神科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E4%B8%AD%E5%8C%BB%E5%A6%87%E4%BA%A7%E7%A7%91" target="_blank"   title="中医妇产科">中医妇产科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E5%84%BF%E7%A7%91" target="_blank"   title="儿科" >儿科</a>
+</span>
+<span>
+<a href="http://www.guahao.com/search?q=%E6%84%9F%E6%9F%93%E7%A7%91" target="_blank"   title="感染科">感染科</a>
+</span>
+<span>
+<a href="http://disease.guahao.com/diseasebydep" class="g-more" target="_blank"  >更多<i></i></a>
+</span>
+</p>
+</li>
+</ul>
+</div>
+<!--底部-->
+<div id="bottom" class="bg_color_gray">
+<div id="logo" class="color_light_gray align_center" >
+<i  class="fa fa-stethoscope fa-lg color_light_gray"> </i>
+<b >医院挂号平台</b>
+</div>
+<div class="align_center">
+<i class="color_light_gray">©copyright 2014 </i>
+</div>
+<div class="align_center ">
+<span><a href="#">帮助</a></span>
+<span>|</span>
+<span><a href="#">意见反馈</a></span>
+<span>|</span>
+<span><a href="#">投诉举报</a></span>
+<span>|</span>
+<span><a href="#">加入我们</a></span>
+</div>
+</div>
+<br />
+<br />
+<br />
+<br />
+</body>
+</html>

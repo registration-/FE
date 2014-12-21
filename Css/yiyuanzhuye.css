@@ -1,0 +1,9 @@
+#keshi a{
+	display: inline-block;
+	margin-right: 20px;
+	width: 200px;
+
+}
+
+.g-ks-cul-name{float:left;text-align:right}
+.g-ks-cul-name a{color:#000000;text-decoration:none;text-align:left;padding-left: 10px}

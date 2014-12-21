@@ -6,8 +6,6 @@ $(document).ready(function(){
 		var list = $('.list-content');
 		list.addClass('hide');
 		list.eq(0).removeClass('hide');
-
-
 	});
 	$("#hospital-a2").hover(function() {
 	var list = $('.list-content');

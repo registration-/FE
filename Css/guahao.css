@@ -11,7 +11,7 @@ color: #888;
 }
 .doc_info{
   float: left;
-  width: 368px;
+  width: 450px;
   padding: 20px;
   border-right: 1px solid #CDCDCD;
       
@@ -20,13 +20,13 @@ color: #888;
 .doc_base_info{
   float: left;
   overflow: hidden;
-  width: 200px;
+  width: 220px;
 }
 .doc-data{
   border-right:  solid 1px #cdcdcd;
    float: left;
   margin:auto;
-  width: 200px;
+  width: 240px;
   height: 100px;
 
 }
@@ -57,4 +57,23 @@ color: #888;
 }
 .page-navigation{
   text-align: center;
+}
+.doctor_img{
+  float: left;
+  display: block;
+  height: 80px;
+  margin: 0px auto;
+  margin-right:10px; 
+  max-width: 90px;
+  width: 75px;
+  border-radius: 10px;
+}
+.guahao{
+  margin-left: 15px;
+  display: inline-block;
+  text-align: left;
+  width: 120px;
+}
+.gua{
+  display: inline-block;
 }

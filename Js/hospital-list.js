@@ -1,6 +1,87 @@
 $(document).ready(function(){
 	var sStorage = window.sessionStorage;
-	
+
+
+	<!--进入页面生成医院列表-->
+	$.ajax({
+						url: 'https://registration-jlxy.rhcloud.com/api/hospitals?city_id=73',
+						type: 'GET',
+						dataType: 'json',
+						data: "",
+					})
+					.done(function(data) {
+						console.log("success");
+						console.log(data);
+						$(".hospital_list").empty();
+						
+						var txt = '';
+						for(var key in data)
+						{
+							txt = txt + '<div class="hospital_box">'
+   +' <div class="hospital_total">'
+     
+      +'<a target="_blank"  href='+data[key].website+'>'
+        +'<img src='+data[key].picture+' alt='+data[key].name+' title='+data[key].name+'>'
+    +'</a>'
+
+    +'<dl>'
+       +'<dt>'
+       
+            +'<a  href='+data[key].website+' target="_blank" title='+data[key].name+'>'+data[key].name+'</a></br>'
+            +'<span>'+data[key].level+'级甲等</span>'
+        +'</dt>'
+        +'<dd>'
+           +' <p class="tel"><span title='+data[key].phone+' class="fa fa-phone">&nbsp'+data[key].phone+'</span></p>'
+           +' <p class="addr"><span title='+data[key].location+' class="fa fa-home">&nbsp'+data[key].location+'</span>'   
+           +' </p>'
+       +' </dd>'
+    +'</dl>'
+   +' </div>'
+   +' <div class="hospital-comment">'
+          +'<div class="order-num g-1200px-show">'
+                +'<p class="num">3.2万</p>'
+                +'<p>就医经验</p>'
+           +' </div> ' 
+            +'<div class="hop-comment">'
+                +'<span  class="fa fa-thumbs-o-up dianzan" style="font-size: 2em;color:#5CA945;margin-top: 10px;left:0px;position: absolute"></span>'
+                +'<label>导医服务：</label><span>88%</span>'
+                +'<label>候诊时间：</label><span>87%</span>'
+            +'</div>'
+    +'</div>'
+    +'<div class="guahao-btn">'
+      +'<a href="guahao.html"><button id="guahao" data-hos_name='+data[key].name+' data-hos='+data[key].id+' class="btn btn-info">挂号</button></a>'
+    +'</div>'
+  +'</div>';
+  		// console.log(data[key].id);
+						}
+						$(".hospital_list").append(txt);
+
+						// 根据不同医院生成不同医生列表
+(function(){
+  $(".hospital_list").on('click','button',function(e){
+  		var hospital_id = e.target.getAttribute("data-hos");
+  		sStorage.hospital_id = hospital_id;
+  		var hospital_name = e.target.getAttribute("data-hos_name");
+  		sStorage.hospital_name = hospital_name;
+  		
+  		
+  		
+
+  });
+})();
+					})
+					.fail(function() {
+						console.log("error");
+					})
+					.always(function() {
+						console.log("complete");
+					});
+
+
+
+
+
+
 	if(sStorage.isLogin == 1)
 	{
 			$("#nav3").html('<a href="#" >个人信息</a>');
@@ -102,7 +183,6 @@ $(document).ready(function(){
 
 				
 				$('#citylist').on('click',function(e){
-						
 					var city = e.target.getAttribute("data-city");
 					$.ajax({
 						url: 'https://registration-jlxy.rhcloud.com/api/hospitals?city_id='+city+'',
@@ -122,15 +202,15 @@ $(document).ready(function(){
 							txt = txt + '<div class="hospital_box">'
    +' <div class="hospital_total">'
      
-      +'<a target="_blank" class="img">'
+      +'<a target="_blank"  href='+data[key].website+'>'
         +'<img src='+data[key].picture+' alt='+data[key].name+' title='+data[key].name+'>'
     +'</a>'
 
     +'<dl>'
        +'<dt>'
        
-            +'<a  target="_blank" title='+data[key].name+'>'+data[key].name+'</a></br>'
-            +'<span>'+data[key].level+'</span>'
+            +'<a  href='+data[key].website+' target="_blank" title='+data[key].name+'>'+data[key].name+'</a></br>'
+            +'<span>'+data[key].level+'级甲等</span>'
         +'</dt>'
         +'<dd>'
            +' <p class="tel"><span title='+data[key].phone+' class="fa fa-phone">&nbsp'+data[key].phone+'</span></p>'
@@ -151,12 +231,22 @@ $(document).ready(function(){
             +'</div>'
     +'</div>'
     +'<div class="guahao-btn">'
-      +'<a href="guahao.html"><button class="btn btn-info">挂号</button></a>'
+      +'<a href="guahao.html"><button id="guahao" data-hos='+data[key].id+' class="btn btn-info">挂号</button></a>'
     +'</div>'
   +'</div>';
-
+  		// console.log(data[key].id);
 						}
 						$(".hospital_list").append(txt);
+
+						// 根据不同医院生成不同医生列表
+(function(){
+  $(".hospital_list").on('click','button',function(e){
+  		var hospital_id = e.target.getAttribute("data-hos");
+  		sStorage.hospital_id = hospital_id;
+  		
+
+  });
+})();
 					})
 					.fail(function() {
 						console.log("error");
@@ -194,4 +284,5 @@ $(document).ready(function(){
             $("#name").text('');
             $("#personal-info")[0].style.display='none';
   });
+
 });

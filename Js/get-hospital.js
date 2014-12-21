@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	var sStorage = sessionStorage;
 	$.ajax({
 		url: 'https://registration-jlxy.rhcloud.com/api/hospitals',
 		type: 'GET',
@@ -28,7 +29,8 @@ $(document).ready(function(){
 				
 		}
 		else{
-			$("#select3").removeAttr('disabled')
+			$("#select3").removeAttr('disabled');
+			
 		}
 		
 		for(var key in data)
