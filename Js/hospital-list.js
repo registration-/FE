@@ -1,10 +1,25 @@
 $(document).ready(function(){
 	var sStorage = window.sessionStorage;
+	var getHospitalUrl = 'http://api.registration.com/api/hospitals?';
+	var department;
+	var $hospitalMetaHolder = $('.location').eq(0);
+
+
+	(function () {
+		var search = window.location.search || '';
+		department = search.split('=')[1];
+		if(department){
+			getHospitalUrl = getHospitalUrl + 'department=' + department;
+		}else{
+			getHospitalUrl = getHospitalUrl + 'city_id=73';
+		}
+	})();
+
 
 
 	<!--进入页面生成医院列表-->
 	$.ajax({
-						url: 'http://api.registration.com/api/hospitals?city_id=73',
+						url: getHospitalUrl,
 						type: 'GET',
 						dataType: 'json',
 						data: "",
@@ -13,7 +28,19 @@ $(document).ready(function(){
 						console.log("success");
 						console.log(data);
 						$(".hospital_list").empty();
-						
+
+						////////
+						if(department){
+							$hospitalMetaHolder.empty();
+							var hmeta = $('<p>' + decodeURIComponent(department) + ':共找到 ' + data.length + ' 家医院</p>')
+							$hospitalMetaHolder.append(hmeta);
+
+						}
+
+
+						/////////////end
+
+
 						var txt = '';
 						for(var key in data)
 						{

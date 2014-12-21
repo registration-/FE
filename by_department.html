@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>医院列表</title>
+    <link rel="stylesheet" href="../Css/template.css">
+    <link rel="stylesheet" href="../Css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../Css/main.css">
+    <link rel="stylesheet" type="text/css" href="../Css/by_department.css">
+    <link rel="stylesheet" href="../Css/font-awesome/css/font-awesome.min.css" >
+    <!--
+    <script src="../Js/jquery.min.js"></script>
+    <script src="../Js/by_keshi.js"></script>
+    -->
+    <script src="./Js/jquery.min.js"></script>
+    <script src="./Js/by_department.js"></script>
+    <script type="text/javascript" src="../Js/login.js"></script>
+</head>
+
+
+<body>
+<div id="head" class="col-lg-12" >
+    <div id="logo" class="margin_left1">
+        <i  class="fa fa-stethoscope fa-lg color_pink"></i>
+        <b >医院挂号平台</b>
+        <div>
+            <div id="name">您好：</div>
+            <div id="personal-info">|&nbsp<a>个人中心&nbsp</a>|&nbsp<a id="logout">注销</a></div>
+        </div>
+    </div>
+    <!--标题-->
+    <nav id="navigation1" class="navbar navbar-primary stickUp" role="navigation" >
+        <div>
+            <ul class="nav nav-pills " >
+                <li id="nav3"><a href="#">登陆</a></li>
+                <li id="nav4"><a href="#">注册</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<br />
+<br />
+<br />
+<br /><br />
+<!--搜索框-->
+<form id="search" role="form" style="" class="list-inline">
+    <input id="search1" type="text" class="form-control"  placeholder="搜索医院、科室"/>
+    <i class="fa fa-search fa-lg btn" ></i>
+</form>
+
+
+
+
+<!--预约导航-->
+<div id="appointment" class="appoint_min_width">
+    <ul class="nav nav-tabs">
+        <li><a href="index.html"> 首页 </a></li>
+        <li><a href="hospital_list.html">按医院预约</a></li>
+        <li class="active"><a href="by_keshi.html">按科室预约</a></li>
+    </ul>
+    <!--科室分类-->
+    <!--标题-->
+
+    <div class="by-keshi">
+        <div class="general-category text-success">
+            <div class="keshi-title">科室列表<h5 class="text-success inline">(按科室查病挂号)</h5></div>
+            <ul class="general-list" id="categories-list">
+            </ul>
+        </div>
+        <div class="detail-category">
+            <div class="detail-keshi-title text-warning">详细科室列表</div>
+            <div id="departments-list">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!--底部-->
+<div id="bottom" class="bg_color_gray">
+    <div id="logo" class="color_light_gray align_center" >
+        <i  class="fa fa-stethoscope fa-lg color_light_gray"> </i>
+        <b >医院挂号平台</b>
+    </div>
+    <div class="align_center">
+        <i class="color_light_gray">©copyright 2014 </i>
+    </div>
+    <div class="align_center ">
+        <span><a href="#">帮助</a></span>
+        <span>|</span>
+        <span><a href="#">意见反馈</a></span>
+        <span>|</span>
+        <span><a href="#">投诉举报</a></span>
+        <span>|</span>
+        <span><a href="#">加入我们</a></span>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+
+</body>
+</html>
+      

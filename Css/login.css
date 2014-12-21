@@ -3,7 +3,7 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, code, del, dfn, em, img, stron
 	margin:0;
 	padding:0;
 }
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+article, aside, details, figcaption, figure, footer, header,  nav, section {
 	display:block
 }
 audio, canvas, video {
@@ -93,7 +93,7 @@ a:hover {
 	visibility:hidden
 }
 .clearfix, .central, .widget ul, .paging, .pagenav, .base-tit {
-*+height:1%;
+height:1%;
 }
 body, button, input, select, textarea, code {
 	font-size:12px;
@@ -237,7 +237,6 @@ body, button, input, select, textarea, code {
 	color:#fff;
 	line-height:42px;
 	margin-top:10px;
-display:;
 	font-size: 14px;
 }
 .dform-tip-errer {
@@ -404,7 +403,6 @@ display:;
 	color:#fff;
 	line-height:42px;
 	margin-top:10px;
-display:;
 	font-size: 14px;
 }
 .dform-tip-errer {
