@@ -77,3 +77,9 @@ color: #888;
 .gua{
   display: inline-block;
 }
+#h-p{
+  color: white;
+}
+#h-p:hover{
+  color: #eee;
+}

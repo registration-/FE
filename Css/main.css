@@ -559,3 +559,22 @@ h1,h2,h3,h4,h5,h6{
 #personal-info a:hover{
   color: black;
 }
+.flag{
+  padding: 4px;
+  border-left: 3px solid #006699;
+}
+.pt{
+  padding-top: 10px;
+}
+.pb{
+  padding-bottom: 10px;
+}
+.pl{
+  padding-left: 10px;
+}
+.ml{
+  margin-left: 10px;
+}
+.udl{
+  border-bottom: 1px dashed #cccccc;
+}

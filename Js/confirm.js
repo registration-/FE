@@ -35,6 +35,7 @@
             $("#name")[0].style.display='none';
             $("#name").text('');
             $("#personal-info")[0].style.display='none';
+        window.location.href = 'http://registration.com';
           }
     $("#getcode").click(function(event) { 
         event.preventDefault();

@@ -22,7 +22,7 @@ $(document).ready(function(){
 						url: getHospitalUrl,
 						type: 'GET',
 						dataType: 'json',
-						data: "",
+						data: ""
 					})
 					.done(function(data) {
 						console.log("success");
@@ -54,7 +54,7 @@ $(document).ready(function(){
     +'<dl>'
        +'<dt>'
        
-            +'<a  href='+data[key].website+' target="_blank" title='+data[key].name+'>'+data[key].name+'</a></br>'
+            +'<a  href="http://registration.com/hospital.html?hid='+ data[key].id  +'" title='+data[key].name+'>'+data[key].name+'</a></br>'
             +'<span>'+data[key].level+'级甲等</span>'
         +'</dt>'
         +'<dd>'
@@ -138,7 +138,7 @@ $(document).ready(function(){
 		url: 'http://api.registration.com/api/provinces',
 		type: 'GET',
 		dataType: 'json',
-		data: "",
+		data: ""
 	})
 	.done(function(data) {
 		console.log("success");
@@ -195,7 +195,7 @@ $(document).ready(function(){
 				url: 'http://api.registration.com/api/cities',
 				type: 'GET',
 				dataType: 'json',
-				data: "",
+				data: ""
 			})
 			.done(function(data) {
 				var txt = '';
@@ -215,7 +215,7 @@ $(document).ready(function(){
 						url: 'http://api.registration.com/api/hospitals?city_id='+city+'',
 						type: 'GET',
 						dataType: 'json',
-						data: "",
+						data: ""
 					})
 					.done(function(data) {
 						console.log("success");

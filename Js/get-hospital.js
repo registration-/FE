@@ -22,7 +22,7 @@ $(document).ready(function(){
 					navTabs.append('<li role="presentation" class=""><a href="#tab-' + key + '" role="tab" data-toggle="tab">' + key + '</a></li>');
 					var tabPanel = $('<div role="tabpanel" class="tab-pane list-content" id="tab-' + key + '">');
 					hospitals.forEach(function(hospital){
-						tabPanel.append('<li><a href="" class="label label-primary">' + hospital.name +'</a></li>');
+						tabPanel.append('<li><a href="http://registration.com/hospital.html?hid=' + hospital.id + '" class="label label-primary">' + hospital.name +'</a></li>');
 					});
 					tabsContent.append(tabPanel);
 				}

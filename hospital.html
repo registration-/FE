@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>医院主页</title>
+    <link rel="stylesheet" href="./Css/main.css">
+    <link rel="stylesheet" href="./Css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./Css/guahao.css">
+    <link rel="stylesheet" href="./Css/hospital.css"/>
+
+    <link rel="stylesheet" type="text/css" href="./Css/login.css">
+
+
+
+    <link rel="stylesheet" href="./Css/font-awesome/css/font-awesome.min.css" >
+
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen"
+          href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+
+
+
+</head>
+<body>
+<div id="head" class="col-lg-12" >
+    <div id="logo" class="margin_left1">
+        <a href="index.html">
+            <i  class="fa fa-stethoscope fa-lg color_pink"> </i>
+            <b >医院挂号平台</b>
+        </a>
+        <div>
+            <div id="name">您好：</div>
+            <div id="personal-info">|&nbsp<a>个人中心&nbsp</a>|&nbsp<a id="logout">注销</a></div>
+        </div>
+    </div>
+    <!--标题-->
+    <nav id="navigation1" class="navbar navbar-primary stickUp" role="navigation" >
+        <div>
+            <ul class="nav nav-pills" >
+                <li id="nav3"><a href="#">登陆</a></li>
+                <li id="nav4"><a href="#">注册</a></li>
+            </ul>
+        </div>
+    </nav>
+
+</div>
+<br />
+<br />
+<br />
+<br /><br />
+<!--搜索框-->
+<form id="search" role="form" style="" class="list-inline">
+    <input id="search1" type="text" class="form-control"  placeholder="搜索医院、科室">
+    <i class="fa fa-search fa-lg btn" ></i>
+</form>
+
+<div id="appointment" class="appoint_min_width">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#"> 首页 </a></li>
+        <li><a href="./hospital_list.html">按医院预约</a></li>
+        <li><a href="./by_department.html">按科室预约</a></li>
+    </ul>
+</div>
+
+<!-- body -->
+<div class="by-condition">
+    <h3 id="h-name"></h3>
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#h-zhuye" role="tab" data-toggle="tab">医院主页</a></li>
+        <li role="presentation"><a href="#h-jianjie" role="tab" data-toggle="tab">医院简介</a></li>
+        <li class="pull-right"><a href="" id="go-yuyue">预约挂号</a></li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="h-zhuye">
+            <div id="h-info-box">
+                <img class="img-thumbnail pull-left" id="h-pic" src="" alt=""/>
+                <div class="h-info-metas pull-left">
+                    <p><label>地址: </label><span id="h-location">暂无</span></p>
+                    <p><label>电话: </label><span id="h-phone">暂无</span></p>
+                    <p><label>网址: </label><span id="h-website">暂无</span></p>
+                    <p><label>简介: </label><span id="h-description">暂无</span></p>
+                </div>
+            </div>
+            <div class="">
+                <h4 class="flag">本院科室挂号</h4>
+                <div id="departments-list"></div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="h-jianjie">
+            <h3 class="text-success pt pb udl">医院简介</h3>
+            <p id="h-desc" class="pt pb"></p>
+            <h3 class="text-success pt pb udl">就诊规则</h3>
+            <p id="h-rule" class="pt"></p>
+        </div>
+    </div>
+</div>
+
+
+
+<!--底部-->
+<div id="bottom" class="bg_color_gray">
+    <div id="logo" class="color_light_gray align_center" >
+        <i  class="fa fa-stethoscope fa-lg color_light_gray"> </i>
+        <b >医院挂号平台</b>
+    </div>
+    <div class="align_center">
+        <i class="color_light_gray">©copyright 2014 </i>
+    </div>
+    <div class="align_center ">
+        <span><a href="#">帮助</a></span>
+        <span>|</span>
+        <span><a href="#">意见反馈</a></span>
+        <span>|</span>
+        <span><a href="#">投诉举报</a></span>
+        <span>|</span>
+        <span><a href="#">加入我们</a></span>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+
+<script src="./Js/jquery.min.js"></script>
+<script src="./Js/bootstrap.min.js"></script>
+<script type="text/javascript"
+        src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
+</script>
+
+<script src="./Js/main.js"></script>
+<script src="./Js/news.js"></script>
+<script type="text/javascript" src="./Js/login.js"></script>
+<script src="./Js/hospital.js"></script>
+
+<script type="text/javascript">
+    $('#datetimepicker').datetimepicker({
+        format: 'MM/dd/yyyy hh:mm',
+        language: 'en',
+        pickDate: true,
+        pickTime: true,
+        hourStep: 1,
+        minuteStep: 15,
+        secondStep: 30,
+        inputMask: true
+    });
+</script>
+
+<script type="text/javascript">
+    $('#datetimepicker2').datetimepicker({
+        format: 'MM/dd/yyyy hh:mm',
+        language: 'en',
+        pickDate: true,
+        pickTime: true,
+        hourStep: 1,
+        minuteStep: 15,
+        secondStep: 30,
+        inputMask: true
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+.by-condition{
+    margin-top: 100px;
+    padding-top: 16px;
+}
+#bottom{
+    margin-top: 10px;
+}
+.inline-block{
+    display: inline-block;
+}
+#h-info-box{
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+#h-pic{
+    width: 160px;
+    height: 120px;
+}
+.h-info-metas{
+    height: 120px;
+    max-width: 680px;
+    margin-left: 10px;
+    display: inline-block;
+}
+.tabpanel{
+    padding-top: 10px;
+}
+#h-name{
+    padding: 10px 6px;
+}
+#h-description{
+}
+.well{
+}
+
+.department-row{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #eee;
+    overflow: hidden;
+}
+.department-row > label{
+    margin-right: 20px;
+    float: left;
+    color: #aaaaaa;
+    font-size: 18px;
+}
+.department-cell{
+    padding-top:4px;
+    float: left;
+}
+.department-cell > a{
+    padding: 4px 20px 4px 2px;
+}

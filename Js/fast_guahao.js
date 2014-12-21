@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	var sStorage = window.sessionStorage;
-	
+	var hospital=null;
+    var depar;
 	if(sStorage.isLogin == 1)
 	{
 			$("#nav3").html('<a href="#" >个人信息</a>');
@@ -13,7 +14,7 @@ $(document).ready(function(){
             $("#name").append(sStorage.uname);
             $("#personal-info")[0].style.display='inline-block';
 	}
-	else if(sStorage.isLogin == 0){
+	else{
             
             $("#nav3").html('<a href="#" class="theme-login">登陆</a>');
             
@@ -24,7 +25,9 @@ $(document).ready(function(){
             $("#name")[0].style.display='none';
             $("#name").text('');
             $("#personal-info")[0].style.display='none';
+            //window.location.href = 'http://registration.com';
           }
+
 	
 	$("#logout").on('click',function(){
             sStorage.isLogin = false;
@@ -39,19 +42,56 @@ $(document).ready(function(){
             $("#personal-info")[0].style.display='none';
   });
 
+
+    getHospital();
+    function getHospital(){
+       var getHospitalUrl = 'http://api.registration.com/api/hospitals/' + sStorage.hospital_id;
+        $.getJSON(getHospitalUrl,function(h){
+           console.log(h);
+            hospital = h.hospital;
+            $('#h-p').text(hospital.name);
+            if(depar){
+                $('#h-dp').text(depar);
+            }
+        });
+    }
+
+
+    var getDoctorUrl = 'http://api.registration.com/api/hospitals/' + sStorage.hospital_id + '/doctors';
+    if(sStorage.department_id){
+        getDoctorUrl = getDoctorUrl + '?department_id=' + sStorage.department_id;
+    }
+    var departments = [];
+    var $keshisx = $('#keshisx');
+    getDepartments();
+    function getDepartments(){
+        var getDepartmentsUrl = 'http://api.registration.com/api/hospitals/' + sStorage.hospital_id + '/departments';
+        $.getJSON(getDepartmentsUrl, function (ds) {
+           console.log(ds);
+            for(var key in ds){
+               departments = departments.concat(ds[key]);
+            }
+            console.log(departments);
+            departments.forEach(function (d) {
+                $keshisx.append($('<td><a href="">' + d.name + '</a></td>'));
+            });
+        });
+    }
+
 	$.ajax({
-		url: 'http://api.registration.com/api/hospitals/' + sStorage.hospital_id+'/doctors?department_id='+sStorage.department_id+'',
+		url: getDoctorUrl,
 		type: 'GET',
 		dataType: 'json',
 		data: ""
 	})
 	.done(function(data) {
 		console.log("success");
-		// console.log(data);
-		
-		
+		console.log(data);
+            if(sStorage.department_id){
+                depar = data[0]['department'];
+            }
 		var txt = '';
-    var txt1 = '';
+        var txt1 = '';
 		for(var key in data)
 		{
 			txt = txt + '<!--医生信息-->'
