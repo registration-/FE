@@ -5,7 +5,7 @@ jQuery(document).ready(function() {
         <!--验证码部分-->
         $("#getcode").click(function() {
 
-            AV.initialize('jgaupci1iv2ltiks0twcvh83ndo14m4v4ag5qcj11orl9gz0', 'o913ici5da0kowgifr0jpoqc3e7xcjcaj24y4fwydkanzzfx');
+            AV.initialize('df6xgsiroas152id5x4441jalilarx3617zcbymnkpju16j7', '9c5cnhy8yimpg2wyakogi72uvcs6dqvcejoxhwy8cfjz6ylj');
             AV.Cloud.requestSmsCode($("#phonenumber").val()).then(function() {
                 //发送成功
                 alert('发送成功');

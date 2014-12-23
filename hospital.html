@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="./Css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./Css/guahao.css">
     <link rel="stylesheet" href="./Css/hospital.css"/>
-
+    
     <link rel="stylesheet" type="text/css" href="./Css/login.css">
 
 
-
+    
     <link rel="stylesheet" href="./Css/font-awesome/css/font-awesome.min.css" >
 
 
@@ -23,6 +23,27 @@
 
 
 </head>
+<!--用户登录弹出窗口-->
+<div class="theme-popover">
+  <div class="theme-poptit">
+    <a href="javascript:;" title="关闭" class="close">×</a>
+    <h3>欢迎来到医院挂号平台</h3>
+  </div>
+  <div class="theme-popbod dform">
+    <form class="theme-signin" name="loginform" action="" method="post">
+      <ol>
+        <li><h4>欢迎登陆</h4></li>
+        <li><strong>用户名：</strong><input id="username" class="ipt" type="text" name="username" size="20" placeholder="请输入身份证/手机号/邮箱" /></li>
+        <li><strong>密码：</strong><input id="password" class="ipt" type="password" name="password" size="20" placeholder="请输入密码"/></li>
+        <li> <input id="submit" class="btn btn-primary" type="submit" name="login" value=" 登 录 "  />
+        <a href="./index/zhuce.html"><input class="btn btn-primary" type="button" name="register" value=" 注 册 " />
+      </a>
+    </li>
+  </ol>
+</form>
+</div>
+</div>
+<div class="theme-popover-mask"></div>
 <body>
 <div id="head" class="col-lg-12" >
     <div id="logo" class="margin_left1">
@@ -32,15 +53,15 @@
         </a>
         <div>
             <div id="name">您好：</div>
-            <div id="personal-info">|&nbsp<a>个人中心&nbsp</a>|&nbsp<a id="logout">注销</a></div>
+            <div id="personal-info">|&nbsp<a href="personal.html">个人中心&nbsp</a>|&nbsp<a id="logout">注销</a></div>
         </div>
     </div>
     <!--标题-->
     <nav id="navigation1" class="navbar navbar-primary stickUp" role="navigation" >
         <div>
             <ul class="nav nav-pills" >
-                <li id="nav3"><a href="#">登陆</a></li>
-                <li id="nav4"><a href="#">注册</a></li>
+                <li id="nav3"><a href="#" class="theme-login">登陆</a></li>
+                <li id="nav4"><a href="zhuce.html">注册</a></li>
             </ul>
         </div>
     </nav>

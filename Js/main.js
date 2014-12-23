@@ -2,27 +2,24 @@ $(document).ready(function() {
   var sStorage = window.sessionStorage;
   if(sStorage.isLogin == 1 )
   {
-    $("#nav3").html('<a href="#">个人信息</a>');
+    
             
-            $("#nav4").css('display', 'none');
-            $("#nav1").css('left', '80px');
-            $("#nav2").css('left', '80px');
-            $("#nav3").css('left', '80px');
+            $("#nav4").css('visibility', 'hidden');
+            $("#nav3").css('visibility', 'hidden');
             $("#name")[0].style.display='inline-block';
-            $("#name").append(sStorage.uname);
+            $("#name").text('您好：'+sStorage.uname);
             $("#personal-info")[0].style.display='inline-block';
   }
   else{
-            $("#nav3").html('<a class="theme-login">登陆</a>');
             
-            $("#nav4").css('display', 'inline-block');
-            $("#nav1").css('left', '0px');
-            $("#nav2").css('left', '0px');
-            $("#nav3").css('left', '0px');
+            
+            $("#nav4").css('visibility', 'visible');
+            $("#nav3").css('visibility', 'visible');
             $("#name")[0].style.display='none';
             $("#name").text('');
             $("#personal-info")[0].style.display='none';
           }
+
   $("#btn1").click(function() {
     $("#test1").animate({
       left: '100px',
@@ -72,6 +69,7 @@ $(document).ready(function() {
       .done(function(data) {
         console.log("success");
           if (data.status==true)  {
+          
             sStorage.uname = $("#username").val();
             sStorage.isLogin = 1;
             sStorage.id = data.user.id;
@@ -81,12 +79,10 @@ $(document).ready(function() {
 
             $('.theme-popover-mask').fadeOut(100);
             $('.theme-popover').slideUp(200);
-            $("#nav3").html('<a href="#">个人信息</a>');
             
-            $("#nav4").css('display', 'none');
-            $("#nav1").css('left', '80px');
-            $("#nav2").css('left', '80px');
-            $("#nav3").css('left', '80px');
+            
+            $("#nav4").css('visibility', 'hidden');
+            $("#nav3").css('visibility', 'hidden');
             $("#name")[0].style.display='inline-block';
             $("#name").text('您好：'+info['account']);
             $("#personal-info")[0].style.display='inline-block';
@@ -101,10 +97,8 @@ $(document).ready(function() {
             alert("用户名密码不正确");
             $("#nav3").html('<a class="theme-login" >登陆</a>');
             
-            $("#nav4").css('display', 'inline-block');
-            $("#nav1").css('left', '0px');
-            $("#nav2").css('left', '0px');
-            $("#nav3").css('left', '0px');
+            $("#nav4").css('visibility', 'visible');
+            $("#nav3").css('visibility', 'visible');
             $("#name")[0].style.display='none';
             $("#name").text('');
             $("#personal-info")[0].style.display='none';
@@ -148,13 +142,9 @@ $(document).ready(function() {
   // }
   // 
   $("#logout").on('click',function(){
-            sStorage.isLogin = 0;
-            $("#nav3").html('<a class="theme-login">登陆</a>');
-            
-            $("#nav4").css('display', 'inline-block');
-            $("#nav1").css('left', '0px');
-            $("#nav2").css('left', '0px');
-            $("#nav3").css('left', '0px');
+            sStorage.isLogin = 0;          
+            $("#nav4").css('visibility', 'visible');
+            $("#nav3").css('visibility', 'visible');
             $("#name")[0].style.display='none';
             $("#name").text('');
             $("#personal-info")[0].style.display='none';

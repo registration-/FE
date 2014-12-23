@@ -2,19 +2,20 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 margin: 0;
 padding: 0;
 border: 0;
-font-size: 100%;
+
 vertical-align: baseline;
 }
 ol, ul {
 list-style: none;
 }
 .all{
-width: 980px;
+width: 915px;
 margin: 0 auto 40px;
+background-color: white;
 }
 .all .wrap {
 background-color: white;
-border: 1px solid #CCC;
+
 }
 .all .wrap .person-left {
 float: left;
@@ -56,9 +57,8 @@ height: 0;
 overflow: hidden;
 display: block;
 }
-.all .wrap .person-left .none-border {
-border: none;
-margin-top: 8px;
+.g-clear {
+zoom: 1;
 }
 .all .wrap .person-left ul {
 margin: 10px 0;
@@ -75,7 +75,7 @@ font-size: 14px;
 color: #333;
 }
 .all .wrap .person-right {
-width: 803px;
+width: 720px;
 float: right;
 }
 .all .wrap .person-right .order-remind {
@@ -83,16 +83,7 @@ height: 103px;
 display: block;
 width: 802px;
 border-left: 1px dashed #CCC;
-background: url() -7px 0;
-}
-.g-clear {
-zoom: 1;
-}
-.all .wrap .person-right .border-left {
-border-left: 1px solid #FCDDDC;
-padding: 20px 10px;
-display: block;
-min-height: 600px;
+background: url(../../img/v2/top-bg.png) -7px 0;
 }
 .all .wrap .person-right .order-remind .meta {
 float: left;
@@ -105,8 +96,6 @@ line-height: 20px;
 .all .wrap .person-right .order-remind .meta h1 {
 color: #888;
 padding-bottom: 2px;
-}
-h1 {
 font-size: 24px;
 font-weight: 400;
 line-height: 30px;
@@ -117,120 +106,62 @@ padding: 20px 10px;
 display: block;
 min-height: 600px;
 }
-.order-list #orderFilter {
-padding: 0 10px 25px;
-}
-input, select, textarea {
-font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑","宋体",Arial,Verdana,sans-serif;
-color: #333;
-}
-.order-list #orderFilter .check, .gp-person .order-list #orderFilter .picker {
-margin-right: 20px;
-}
-.g-left {
-float: left;
-}
-.order-list #orderFilter label {
-display: inline-block;
-line-height: 30px;
-padding-right: 4px;
-vertical-align: top;
-font-size: 14px;
-}
-select {
-border: 1px solid #CCC;
-font-size: 12px;
-font-weight: 400;
-line-height: 28px;
-padding: 5px;
-height: 30px;
-}
 .order-list table {
 width: 100%;
 table-layout: fixed;
 }
-.order-list #orderFilter .check, .gp-person .order-list #orderFilter .picker {
-margin-right: 20px;
+.order-list table th {
+height: 34px;
+background-color: #E1EFF9;
+vertical-align: middle;
+color: #1C55B5;
+font-weight: 400;
+font-size: 12px;
+text-align:center;
 }
-.g-datepicker {
-position: relative;
-display: inline-block;
-}
-.order-list #orderFilter .picker input {
-width: 105px;
-}
-input.text {
-border: 1px solid #CCC;
--webkit-border-radius: 3px;
--moz-border-radius: 3px;
-border-radius: 3px;
-font-size: 14px;
-height: 20px;
+.order-list table td {
+vertical-align: top;
 line-height: 20px;
-padding: 5px;
-width: 240px;
-font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑","宋体",Arial,Verdana,sans-serif;
--webkit-box-shadow: none;
--moz-box-shadow: none;
-box-shadow: none;
-background: #FFFFFE;
-color: #333;
-}
-.g-datepicker .ui-datepicker-trigger {
-cursor: pointer;
-position: absolute;
-top: 50%;
-right: 5px;
-height: 16px;
-overflow: hidden;
-width: 16px;
-background: url(../../img/v2/icons-v2.png) 0 -108px no-repeat;
-margin-top: -8px;
-}
-.gb-grey2 {
-background-position: 0 -2986px;
-padding-left: 5px;
-}
-.gb {
-background: url(../../img/v2/button-v2.png) no-repeat;
-text-decoration: none;
-display: inline-block;
-}
-.gb-grey2 .gb-right {
-background-position: right -3110px;
-padding-right: 5px;
-}
-.gb .gb-right {
-background: url(../../img/v2/button-v2.png) no-repeat;
-display: inline-block;
-cursor: pointer;
-}
-.gb-grey2 .gb-text {
-background-position: 0 -3048px;
-padding: 0 20px;
-height: 31px;
-line-height: 30px;
-color: #333;
-font-size: 14px;
-}
-.gb .gb-text {
-background: url(../../img/v2/button-v2.png) repeat-x;
-display: inline-block;
 text-align: center;
-cursor: pointer;
+padding: 20px 0;
+font-size: 12px;
+color: #333;
+background: url(../../img/v2/blue-border.png) 0 bottom repeat-x #F9F9F9;
 }
-table {
-border-collapse: collapse;
-border-spacing: 0;
-width: 100%;
+.all .wrap .person-right2 {
+width: 720px;
+float: right;
 }
-
-/*管理*/
-
-.patients-manage .patients-list {
+.all .wrap .person-right2 .order-remind {
+height: 103px;
+display: block;
+width: 802px;
+border-left: 1px dashed #CCC;
+background: url(../../img/v2/top-bg.png) -7px 0;
+}
+.all .wrap .person-right2 .order-remind .meta {
+float: left;
+color: #888;
+font-size: 14px;
+padding: 16px 0 0 20px;
+width: 560px;
+line-height: 20px;
+}
+.all .wrap .person-right2 .order-remind .meta h1 {
+color: #888;
+padding-bottom: 2px;
+font-size: 24px;
+font-weight: 400;
+line-height: 30px;
+}
+.patients-list {
 padding-bottom: 50px;
 }
-
+.patients-list-table {
+width: 100%;
+table-layout: fixed;
+text-align: center;
+}
 .patients-list-table thead th {
 height: 34px;
 line-height: 34px;
@@ -238,16 +169,43 @@ color: #1c55b5;
 font-weight: 400;
 background-color: #e1eff9;
 text-align: center;
-
 }	
-
-.patients-list-table {
-width: 100%;
-table-layout: fixed;
-text-align: center;
-}
-
 .patients-list-table tbody td a {
 display: inline-block;
 margin: 0 5px;
+}
+.all .wrap .person-right3 {
+width: 720px;
+float: right;
+}
+.all .wrap .person-right3 .order-remind {
+height: 103px;
+display: block;
+width: 802px;
+border-left: 1px dashed #CCC;
+background: url(../../img/v2/top-bg.png) -7px 0;
+}
+.all .wrap .person-right3 .order-remind .meta {
+float: left;
+color: #888;
+font-size: 14px;
+padding: 16px 0 0 20px;
+width: 560px;
+line-height: 20px;
+}
+.all .wrap .person-right3 .order-remind .meta h1 {
+color: #888;
+padding-bottom: 2px;
+font-size: 24px;
+font-weight: 400;
+line-height: 30px;
+}
+
+.sm{
+	display: none;
+	position: absolute;
+	float: left;
+	height: 25px;
+	width: 150px;
+	
 }

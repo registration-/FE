@@ -6,6 +6,35 @@ $(document).ready(function() {
 	var department;
 	var department_id;
 	var doctor_department;
+	if(sStorage.isLogin == 1 )
+	{
+		
+            
+            $("#nav4").css('visibility', 'hidden');
+            $("#nav3").css('visibility', 'hidden');
+            $("#name")[0].style.display='inline-block';
+            $("#name").text('您好：'+sStorage.uname);
+            $("#personal-info")[0].style.display='inline-block';
+	}
+	else{
+            
+            
+            $("#nav4").css('visibility', 'visible');
+            $("#nav3").css('visibility', 'visible');
+            $("#name")[0].style.display='none';
+            $("#name").text('');
+            $("#personal-info")[0].style.display='none';
+          }
+  	$("#logout").on('click',function(){
+            sStorage.isLogin = 0;           
+            $("#nav4").css('visibility', 'visible');
+            $("#nav3").css('visibility', 'visible');
+            $("#name")[0].style.display='none';
+            $("#name").text('');
+            $("#personal-info")[0].style.display='none';
+  });
+
+
 	$("#select3").change(function() {
 		hospital = $("#select3 option:selected");
 		uid = hospital.val();
